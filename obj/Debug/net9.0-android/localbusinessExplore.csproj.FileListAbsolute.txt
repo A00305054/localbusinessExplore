@@ -1349,3 +1349,4 @@ C:\Users\ankit\source\repos\localbusinessExplore\obj\Debug\net9.0-android\androi
 C:\Users\ankit\source\repos\localbusinessExplore\obj\Debug\net9.0-android\android\marshal_methods.arm64-v8a.o
 C:\Users\ankit\source\repos\localbusinessExplore\obj\Debug\net9.0-android\android\jni_remap.arm64-v8a.o
 C:\Users\ankit\source\repos\localbusinessExplore\obj\Debug\net9.0-android\app_shared_libraries\arm64-v8a\libxamarin-app.so
+C:\Users\ankit\source\repos\localbusinessExplore\obj\Debug\net9.0-android\localbusinessExplore.sourcelink.json

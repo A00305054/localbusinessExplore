@@ -296,3 +296,4 @@ C:\Users\ankit\source\repos\localbusinessExplore\obj\Debug\net9.0-maccatalyst\ma
 C:\Users\ankit\source\repos\localbusinessExplore\bin\Debug\net9.0-maccatalyst\maccatalyst-x64\Microsoft.Maui.Controls.HotReload.Forms.dll
 C:\Users\ankit\source\repos\localbusinessExplore\bin\Debug\net9.0-maccatalyst\maccatalyst-x64\Microsoft.VisualStudio.DesignTools.MobileTapContracts.dll
 C:\Users\ankit\source\repos\localbusinessExplore\bin\Debug\net9.0-maccatalyst\maccatalyst-x64\Microsoft.VisualStudio.DesignTools.TapContract.dll
+C:\Users\ankit\source\repos\localbusinessExplore\obj\Debug\net9.0-maccatalyst\maccatalyst-x64\localbusinessExplore.sourcelink.json
