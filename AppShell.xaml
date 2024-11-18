@@ -7,6 +7,9 @@
 
     <Tab Title="SignUpPage" Icon="icon.png">
         <ShellContent ContentTemplate="{DataTemplate pages:SignUpPage}" />
+
+        <ShellContent ContentTemplate="{DataTemplate pages:LoginPage}" Route="LoginPage" />
+
     </Tab>
 
 </Shell>
