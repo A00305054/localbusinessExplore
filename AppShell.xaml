@@ -1,15 +1,10 @@
-<?xml version="1.0" encoding="UTF-8" ?>
 <Shell
     x:Class="localbusinessExplore.AppShell"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:pages="clr-namespace:localbusinessExplore.Pages">
 
-    <Tab Title="SignUpPage" Icon="icon.png">
-        <ShellContent ContentTemplate="{DataTemplate pages:SignUpPage}" />
-
-        <ShellContent ContentTemplate="{DataTemplate pages:LoginPage}" Route="LoginPage" />
-
-    </Tab>
+    <ShellContent ContentTemplate="{DataTemplate pages:LoginPage}" Route="LoginPage" />
+    <ShellContent ContentTemplate="{DataTemplate pages:SignUpPage}" Route="SignUpPage" />
 
 </Shell>

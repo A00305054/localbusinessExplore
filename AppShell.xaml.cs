@@ -8,8 +8,8 @@ namespace localbusinessExplore
         {
             InitializeComponent();
 
+            Routing.RegisterRoute(nameof(LoginPage), typeof(LoginPage));
             Routing.RegisterRoute(nameof(SignUpPage), typeof(SignUpPage));
-            Routing.RegisterRoute("LoginPage", typeof(Pages.LoginPage));
 
 
         }

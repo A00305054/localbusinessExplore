@@ -251,6 +251,9 @@ C:\Users\ankit\source\repos\localbusinessExplore\bin\Debug\net9.0-ios\iossimulat
 C:\Users\ankit\source\repos\localbusinessExplore\bin\Debug\net9.0-ios\iossimulator-x64\libxamarin-dotnet-nativeaot.a
 C:\Users\ankit\source\repos\localbusinessExplore\bin\Debug\net9.0-ios\iossimulator-x64\libxamarin-dotnet.a
 C:\Users\ankit\source\repos\localbusinessExplore\bin\Debug\net9.0-ios\iossimulator-x64\libxamarin-dotnet.dylib
+C:\Users\ankit\source\repos\localbusinessExplore\bin\Debug\net9.0-ios\iossimulator-x64\Microsoft.Maui.Controls.HotReload.Forms.dll
+C:\Users\ankit\source\repos\localbusinessExplore\bin\Debug\net9.0-ios\iossimulator-x64\Microsoft.VisualStudio.DesignTools.MobileTapContracts.dll
+C:\Users\ankit\source\repos\localbusinessExplore\bin\Debug\net9.0-ios\iossimulator-x64\Microsoft.VisualStudio.DesignTools.TapContract.dll
 C:\Users\ankit\source\repos\localbusinessExplore\obj\Debug\net9.0-ios\iossimulator-x64\build-signature\signature
 C:\Users\ankit\source\repos\localbusinessExplore\obj\Debug\net9.0-ios\iossimulator-x64\mauiimage.inputs
 C:\Users\ankit\source\repos\localbusinessExplore\obj\Debug\net9.0-ios\iossimulator-x64\mauifont.inputs
@@ -273,10 +276,10 @@ C:\Users\ankit\source\repos\localbusinessExplore\obj\Debug\net9.0-ios\iossimulat
 C:\Users\ankit\source\repos\localbusinessExplore\obj\Debug\net9.0-ios\iossimulator-x64\resizetizer\r\Assets.xcassets\appicon.appiconset\appicon20x20@3x.png
 C:\Users\ankit\source\repos\localbusinessExplore\obj\Debug\net9.0-ios\iossimulator-x64\resizetizer\r\Assets.xcassets\appicon.appiconset\appicon20x20@2x.png
 C:\Users\ankit\source\repos\localbusinessExplore\obj\Debug\net9.0-ios\iossimulator-x64\resizetizer\r\Assets.xcassets\appicon.appiconset\Contents.json
-C:\Users\ankit\source\repos\localbusinessExplore\obj\Debug\net9.0-ios\iossimulator-x64\resizetizer\r\Resources\signup_illustration.png
 C:\Users\ankit\source\repos\localbusinessExplore\obj\Debug\net9.0-ios\iossimulator-x64\resizetizer\r\dotnet_bot@3x.png
 C:\Users\ankit\source\repos\localbusinessExplore\obj\Debug\net9.0-ios\iossimulator-x64\resizetizer\r\dotnet_bot@2x.png
 C:\Users\ankit\source\repos\localbusinessExplore\obj\Debug\net9.0-ios\iossimulator-x64\resizetizer\r\dotnet_bot.png
+C:\Users\ankit\source\repos\localbusinessExplore\obj\Debug\net9.0-ios\iossimulator-x64\resizetizer\r\Resources\signup_illustration.png
 C:\Users\ankit\source\repos\localbusinessExplore\obj\Debug\net9.0-ios\iossimulator-x64\mauiimage.stamp
 C:\Users\ankit\source\repos\localbusinessExplore\obj\Debug\net9.0-ios\iossimulator-x64\mauiimage.outputs
 C:\Users\ankit\source\repos\localbusinessExplore\obj\Debug\net9.0-ios\iossimulator-x64\resizetizer\f\MauiInfo.plist
@@ -299,6 +302,7 @@ C:\Users\ankit\source\repos\localbusinessExplore\obj\Debug\net9.0-ios\iossimulat
 C:\Users\ankit\source\repos\localbusinessExplore\obj\Debug\net9.0-ios\iossimulator-x64\localbusinessExplore.AssemblyInfoInputs.cache
 C:\Users\ankit\source\repos\localbusinessExplore\obj\Debug\net9.0-ios\iossimulator-x64\localbusinessExplore.AssemblyInfo.cs
 C:\Users\ankit\source\repos\localbusinessExplore\obj\Debug\net9.0-ios\iossimulator-x64\localbusinessExplore.csproj.CoreCompileInputs.cache
+C:\Users\ankit\source\repos\localbusinessExplore\obj\Debug\net9.0-ios\iossimulator-x64\localbusinessExplore.sourcelink.json
 C:\Users\ankit\source\repos\localbusinessExplore\obj\Debug\net9.0-ios\iossimulator-x64\XamlC.stamp
 C:\Users\ankit\source\repos\localbusinessExplore\obj\Debug\net9.0-ios\iossimulator-x64\localbus.CB17F17C.Up2Date
 C:\Users\ankit\source\repos\localbusinessExplore\obj\Debug\net9.0-ios\iossimulator-x64\localbusinessExplore.dll
@@ -306,7 +310,3 @@ C:\Users\ankit\source\repos\localbusinessExplore\obj\Debug\net9.0-ios\iossimulat
 C:\Users\ankit\source\repos\localbusinessExplore\obj\Debug\net9.0-ios\iossimulator-x64\localbusinessExplore.pdb
 C:\Users\ankit\source\repos\localbusinessExplore\obj\Debug\net9.0-ios\iossimulator-x64\localbusinessExplore.genruntimeconfig.cache
 C:\Users\ankit\source\repos\localbusinessExplore\obj\Debug\net9.0-ios\iossimulator-x64\ref\localbusinessExplore.dll
-C:\Users\ankit\source\repos\localbusinessExplore\bin\Debug\net9.0-ios\iossimulator-x64\Microsoft.Maui.Controls.HotReload.Forms.dll
-C:\Users\ankit\source\repos\localbusinessExplore\bin\Debug\net9.0-ios\iossimulator-x64\Microsoft.VisualStudio.DesignTools.MobileTapContracts.dll
-C:\Users\ankit\source\repos\localbusinessExplore\bin\Debug\net9.0-ios\iossimulator-x64\Microsoft.VisualStudio.DesignTools.TapContract.dll
-C:\Users\ankit\source\repos\localbusinessExplore\obj\Debug\net9.0-ios\iossimulator-x64\localbusinessExplore.sourcelink.json
