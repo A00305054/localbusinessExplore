@@ -1,24 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\ankit\\source\\repos\\localbusinessExplore\\localbusinessExplore.csproj": {}
+    "C:\\Users\\Dell\\source\\repos\\localbusinessExplore\\localbusinessExplore.csproj": {}
   },
   "projects": {
-    "C:\\Users\\ankit\\source\\repos\\localbusinessExplore\\localbusinessExplore.csproj": {
+    "C:\\Users\\Dell\\source\\repos\\localbusinessExplore\\localbusinessExplore.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ankit\\source\\repos\\localbusinessExplore\\localbusinessExplore.csproj",
+        "projectUniqueName": "C:\\Users\\Dell\\source\\repos\\localbusinessExplore\\localbusinessExplore.csproj",
         "projectName": "localbusinessExplore",
-        "projectPath": "C:\\Users\\ankit\\source\\repos\\localbusinessExplore\\localbusinessExplore.csproj",
-        "packagesPath": "C:\\Users\\ankit\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ankit\\source\\repos\\localbusinessExplore\\obj\\",
+        "projectPath": "C:\\Users\\Dell\\source\\repos\\localbusinessExplore\\localbusinessExplore.csproj",
+        "packagesPath": "C:\\Users\\Dell\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Dell\\source\\repos\\localbusinessExplore\\obj\\",
         "projectStyle": "PackageReference",
         "crossTargeting": true,
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\ankit\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Dell\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
