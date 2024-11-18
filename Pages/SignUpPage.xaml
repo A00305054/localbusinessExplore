@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="localbusinessExplore.Pages.SignUpPage"
+             BackgroundColor="White"
+             Title="Create Account">
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="30">
+            <!-- Header Image -->
+            <Image Source="signup_illustration.png" 
+                   HeightRequest="200" 
+                   HorizontalOptions="Center" />
+
+            <!-- Title -->
+            <Label Text="Create a New Account"
+                   FontSize="24"
+                   FontAttributes="Bold"
+                   HorizontalTextAlignment="Center"
+                   TextColor="Black" />
+
+            <!-- Name Field -->
+            <HorizontalStackLayout Spacing="10">
+                <Image Source="user_icon.png" WidthRequest="25" HeightRequest="25" />
+                <Entry Placeholder="Name"
+                       FontSize="16"
+                       BackgroundColor="Transparent"
+                       VerticalOptions="Center" />
+            </HorizontalStackLayout>
+
+            <!-- Username Field -->
+            <HorizontalStackLayout Spacing="10">
+                <Image Source="username_icon.png" WidthRequest="25" HeightRequest="25" />
+                <Entry Placeholder="Username"
+                       FontSize="16"
+                       BackgroundColor="Transparent"
+                       VerticalOptions="Center" />
+            </HorizontalStackLayout>
+
+            <!-- Email Field -->
+            <HorizontalStackLayout Spacing="10">
+                <Image Source="email_icon.png" WidthRequest="25" HeightRequest="25" />
+                <Entry Placeholder="Enter Email"
+                       FontSize="16"
+                       BackgroundColor="Transparent"
+                       Keyboard="Email"
+                       VerticalOptions="Center" />
+            </HorizontalStackLayout>
+
+            <!-- Password Field -->
+            <HorizontalStackLayout Spacing="10">
+                <Image Source="password_icon.png" WidthRequest="25" HeightRequest="25" />
+                <Entry Placeholder="Enter Password"
+                       FontSize="16"
+                       IsPassword="True"
+                       BackgroundColor="Transparent"
+                       VerticalOptions="Center" />
+            </HorizontalStackLayout>
+
+            <!-- Sign-Up Button -->
+            <Button Text="Sign-Up"
+                    FontSize="18"
+                    BackgroundColor="#6CC4A1"
+                    TextColor="White"
+                    HeightRequest="50"
+                    CornerRadius="25"
+                    HorizontalOptions="FillAndExpand"
+                     Clicked="OnNavigateToSignUp"
+                    VerticalOptions="Center" />
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
