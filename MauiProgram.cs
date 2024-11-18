@@ -1,5 +1,5 @@
 ﻿using Microsoft.Extensions.Logging;
-using localbusinessExplore; 
+using localbusinessExplore;
 
 namespace localbusinessExplore;
 
