@@ -7,9 +7,29 @@ namespace localbusinessExplore.Pages
             InitializeComponent();
         }
 
-        private async void OnNavigateToSignUp(object sender, EventArgs e)
+        private async void OnSignUpClicked(object sender, EventArgs e)
         {
-            await Shell.Current.GoToAsync(nameof(SignUpPage));
+            try
+            {
+                // Validate input fields
+                if (string.IsNullOrWhiteSpace(nameEntry.Text) ||
+                    string.IsNullOrWhiteSpace(emailEntry.Text) ||
+                    string.IsNullOrWhiteSpace(passwordEntry.Text))
+                {
+                    await DisplayAlert("Error", "Please fill all fields.", "OK");
+                    return;
+                }
+
+                // Mock account creation logic
+                await DisplayAlert("Success", "Account created successfully!", "OK");
+
+                // Navigate back to LoginPage
+                await Shell.Current.GoToAsync("//LoginPage");
+            }
+            catch (Exception ex)
+            {
+                await DisplayAlert("Error", $"Something went wrong: {ex.Message}", "OK");
+            }
         }
     }
 }
