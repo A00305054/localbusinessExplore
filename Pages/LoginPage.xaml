@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="localbusinessExplore.Pages.LoginPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+    <VerticalStackLayout>
+        <!--  Image Section  -->
+        <Frame
+            Padding="80"
+            Background="White"
+            BackgroundColor="WhiteSmoke"
+            BorderColor="White">
+            <Image
+                HeightRequest="200"
+                HorizontalOptions="Center"
+                Source="app_icon.png" />
+        </Frame>
+
+
+        <!--  Email Entry  -->
+        <Frame
+            Margin="10"
+            Padding="10"
+            BorderColor="Black"
+            CornerRadius="10"
+            HasShadow="False"
+            HeightRequest="60">
+            <Entry
+                x:Name="emailEntry"
+                Margin="10"
+                HeightRequest="50"
+                Keyboard="Email"
+                Placeholder="Email"
+                PlaceholderColor="Gray"
+                Text="{Binding Email}"
+                TextColor="Black" />
+        </Frame>
+
+        <!--  Password Entry  -->
+        <Frame
+            Margin="10"
+            Padding="10"
+            BorderColor="Black"
+            CornerRadius="10"
+            HasShadow="False"
+            HeightRequest="60">
+            <Grid>
+                <Entry
+                    x:Name="passwordEntry"
+                    Margin="10"
+                    HeightRequest="50"
+                    IsPassword="True"
+                    Placeholder="Password"
+                    PlaceholderColor="Gray"
+                    Text="{Binding Password}"
+                    TextColor="Black" />
+                <ImageButton
+                    BackgroundColor="Transparent"
+                    HeightRequest="25"
+                    HorizontalOptions="End"
+                    Source="eye.png"
+                    VerticalOptions="Center"
+                    WidthRequest="50" />
+            </Grid>
+        </Frame>
+        <!--  Sign In Button  -->
+        <Button
+            Margin="10"
+            BackgroundColor="Black"
+            Clicked="OnLoginClicked"
+            HeightRequest="50"
+            Text="Sign In"
+            TextColor="White" />
+
+
+        <!--  Sign Up Text  -->
+        <!--  Sign Up Link  -->
+        <Button
+            BackgroundColor="Transparent"
+            Clicked="OnSignUpClicked"
+            HeightRequest="40"
+            Text="Not a user? Sign up here"
+            TextColor="Blue" />
+    </VerticalStackLayout>
+</ContentPage>
