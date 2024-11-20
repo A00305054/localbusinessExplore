@@ -11,10 +11,14 @@
 using System;
 using System.Reflection;
 
+[assembly: System.Reflection.AssemblyMetadataAttribute("Microsoft.Maui.ApplicationModel.AppInfo.PackageName", "com.companyname.localbusinessexplore")]
+[assembly: System.Reflection.AssemblyMetadataAttribute("Microsoft.Maui.ApplicationModel.AppInfo.PublisherName", "User Name")]
+[assembly: System.Reflection.AssemblyMetadataAttribute("Microsoft.Maui.ApplicationModel.AppInfo.Name", "localbusinessExplore")]
+[assembly: System.Reflection.AssemblyMetadataAttribute("Microsoft.Maui.ApplicationModel.AppInfo.Version", "1.0.0.1")]
 [assembly: System.Reflection.AssemblyCompanyAttribute("localbusinessExplore")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ab98eb49a4763cc8097ab5d53a808b061a61c5fa")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0+acd367155d355202a98bdc73e8d5e9f487dceaec")]
 [assembly: System.Reflection.AssemblyProductAttribute("localbusinessExplore")]
 [assembly: System.Reflection.AssemblyTitleAttribute("localbusinessExplore")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

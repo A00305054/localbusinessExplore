@@ -1,3 +1,6 @@
+using System;
+using Microsoft.Maui.Controls;
+
 namespace localbusinessExplore.Pages
 {
     public partial class SignUpPage : ContentPage
