@@ -545,10 +545,14 @@ C:\Users\Dell\Source\Repos\localbusinessExplore\bin\Debug\net9.0-maccatalyst\mac
 C:\Users\Dell\Source\Repos\localbusinessExplore\bin\Debug\net9.0-maccatalyst\maccatalyst-x64\libxamarin-dotnet-nativeaot.a
 C:\Users\Dell\Source\Repos\localbusinessExplore\bin\Debug\net9.0-maccatalyst\maccatalyst-x64\libxamarin-dotnet.a
 C:\Users\Dell\Source\Repos\localbusinessExplore\bin\Debug\net9.0-maccatalyst\maccatalyst-x64\libxamarin-dotnet.dylib
+C:\Users\Dell\Source\Repos\localbusinessExplore\bin\Debug\net9.0-maccatalyst\maccatalyst-x64\Microsoft.Maui.Controls.HotReload.Forms.dll
+C:\Users\Dell\Source\Repos\localbusinessExplore\bin\Debug\net9.0-maccatalyst\maccatalyst-x64\Microsoft.VisualStudio.DesignTools.MobileTapContracts.dll
+C:\Users\Dell\Source\Repos\localbusinessExplore\bin\Debug\net9.0-maccatalyst\maccatalyst-x64\Microsoft.VisualStudio.DesignTools.TapContract.dll
 C:\Users\Dell\Source\Repos\localbusinessExplore\obj\Debug\net9.0-maccatalyst\maccatalyst-x64\mauiimage.inputs
 C:\Users\Dell\Source\Repos\localbusinessExplore\obj\Debug\net9.0-maccatalyst\maccatalyst-x64\mauifont.inputs
 C:\Users\Dell\Source\Repos\localbusinessExplore\obj\Debug\net9.0-maccatalyst\maccatalyst-x64\mauisplash.inputs
 C:\Users\Dell\Source\Repos\localbusinessExplore\obj\Debug\net9.0-maccatalyst\maccatalyst-x64\mauisplash.stamp
+C:\Users\Dell\Source\Repos\localbusinessExplore\obj\Debug\net9.0-maccatalyst\maccatalyst-x64\resizetizer\r\Resources\signup_illustration.png
 C:\Users\Dell\Source\Repos\localbusinessExplore\obj\Debug\net9.0-maccatalyst\maccatalyst-x64\resizetizer\r\Assets.xcassets\appicon.appiconset\appiconItunesArtwork.png
 C:\Users\Dell\Source\Repos\localbusinessExplore\obj\Debug\net9.0-maccatalyst\maccatalyst-x64\resizetizer\r\Assets.xcassets\appicon.appiconset\appicon83.5x83.5@2x.png
 C:\Users\Dell\Source\Repos\localbusinessExplore\obj\Debug\net9.0-maccatalyst\maccatalyst-x64\resizetizer\r\Assets.xcassets\appicon.appiconset\appicon76x76@2x.png
@@ -564,7 +568,6 @@ C:\Users\Dell\Source\Repos\localbusinessExplore\obj\Debug\net9.0-maccatalyst\mac
 C:\Users\Dell\Source\Repos\localbusinessExplore\obj\Debug\net9.0-maccatalyst\maccatalyst-x64\resizetizer\r\dotnet_bot@3x.png
 C:\Users\Dell\Source\Repos\localbusinessExplore\obj\Debug\net9.0-maccatalyst\maccatalyst-x64\resizetizer\r\dotnet_bot@2x.png
 C:\Users\Dell\Source\Repos\localbusinessExplore\obj\Debug\net9.0-maccatalyst\maccatalyst-x64\resizetizer\r\dotnet_bot.png
-C:\Users\Dell\Source\Repos\localbusinessExplore\obj\Debug\net9.0-maccatalyst\maccatalyst-x64\resizetizer\r\Resources\signup_illustration.png
 C:\Users\Dell\Source\Repos\localbusinessExplore\obj\Debug\net9.0-maccatalyst\maccatalyst-x64\mauiimage.stamp
 C:\Users\Dell\Source\Repos\localbusinessExplore\obj\Debug\net9.0-maccatalyst\maccatalyst-x64\mauiimage.outputs
 C:\Users\Dell\Source\Repos\localbusinessExplore\obj\Debug\net9.0-maccatalyst\maccatalyst-x64\resizetizer\f\MauiInfo.plist

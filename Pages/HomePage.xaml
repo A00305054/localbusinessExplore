@@ -2,18 +2,100 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="localbusinessExplore.Pages.HomePage"
-             Title="HomePage">
-    <VerticalStackLayout>
-        <Label 
-            Text="Welcome to Local Business Explorer!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
-       
+             Title="Home">
+    <ScrollView>
+        <VerticalStackLayout Padding="10" Spacing="20">
 
-        <!--  Header Image  -->
-        <Image
-                HeightRequest="200"
-                HorizontalOptions="Center"
-                Source="signup_illustration.png" />
-    </VerticalStackLayout>
+            <!-- Header Section -->
+            <Grid BackgroundColor="#F8F8F8" Padding="10" >
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="40" />
+                </Grid.ColumnDefinitions>
+
+                <Entry Placeholder="Search..." Grid.Column="0" 
+                       VerticalOptions="Center" 
+                       BackgroundColor="#FFFFFF" 
+                       Margin="5" 
+                       HeightRequest="40"
+                       />
+                <ImageButton Source="menu_icon.png" Grid.Column="1" 
+                             VerticalOptions="Center"
+                             HeightRequest="30" WidthRequest="30" />
+            </Grid>
+
+            <!-- Welcome Text -->
+            <Label Text="Explore Businesses Near You" 
+                   FontSize="18" 
+                   HorizontalOptions="Center" 
+                   FontAttributes="Bold" />
+
+            <!-- Location Banner -->
+            <Image Source="signup_illustration.png"
+                   HeightRequest="120" 
+                   HorizontalOptions="Center" />
+
+            <!-- Categories Section -->
+            <StackLayout>
+                <Grid Padding="5">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+
+                    <!-- Categories Text -->
+                    <Label Text="Categories" Grid.Row="0" Grid.Column="0" FontAttributes="Bold" />
+                    <Label Text="Show All" Grid.Row="0" Grid.Column="1" 
+                           HorizontalTextAlignment="End" 
+                           TextColor="#007AFF" />
+
+                    <!-- Categories Icons -->
+                    <StackLayout Orientation="Horizontal" Grid.Row="1" Spacing="20">
+                        <VerticalStackLayout HorizontalOptions="Center" Spacing="5">
+                            <Image Source="food_icon.png" HeightRequest="60" WidthRequest="60" />
+                            <Label Text="Food" HorizontalTextAlignment="Center" />
+                        </VerticalStackLayout>
+
+                        <VerticalStackLayout HorizontalOptions="Center" Spacing="5">
+                            <Image Source="grocery_icon.png" HeightRequest="60" WidthRequest="60" />
+                            <Label Text="Grocery" HorizontalTextAlignment="Center" />
+                        </VerticalStackLayout>
+
+                        <VerticalStackLayout HorizontalOptions="Center" Spacing="5">
+                            <Image Source="shopping_icon.png" HeightRequest="60" WidthRequest="60" />
+                            <Label Text="Shopping" HorizontalTextAlignment="Center" />
+                        </VerticalStackLayout>
+
+                        <VerticalStackLayout HorizontalOptions="Center" Spacing="5">
+                            <Image Source="event_icon.png" HeightRequest="60" WidthRequest="60" />
+                            <Label Text="Events" HorizontalTextAlignment="Center" />
+                        </VerticalStackLayout>
+                    </StackLayout>
+                </Grid>
+            </StackLayout>
+
+            <!-- Footer Navigation -->
+            <Grid Padding="5" BackgroundColor="#F8F8F8">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+                <ImageButton Source="home_icon.png" Grid.Column="0" 
+                             HeightRequest="40" WidthRequest="40" />
+                <ImageButton Source="explore_icon.png" Grid.Column="1" 
+                             HeightRequest="40" WidthRequest="40" />
+                <ImageButton Source="profile_icon.png" Grid.Column="2" 
+                             HeightRequest="40" WidthRequest="40" />
+            </Grid>
+        </VerticalStackLayout>
+    </ScrollView>
 </ContentPage>

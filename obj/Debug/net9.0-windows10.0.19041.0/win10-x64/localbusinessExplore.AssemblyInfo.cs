@@ -18,7 +18,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("localbusinessExplore")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0+acd367155d355202a98bdc73e8d5e9f487dceaec")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0+f10001c3a02ff11d8fb5ab4eeb34c63e419552d5")]
 [assembly: System.Reflection.AssemblyProductAttribute("localbusinessExplore")]
 [assembly: System.Reflection.AssemblyTitleAttribute("localbusinessExplore")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

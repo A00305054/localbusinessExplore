@@ -3,18 +3,24 @@
     x:Class="localbusinessExplore.Pages.LoginPage"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+    
+    
     <VerticalStackLayout>
+
+        <Label
+        FontAttributes="Bold"
+        FontSize="20"
+        HorizontalTextAlignment="Center"
+        Text="Sign In to Local Business Explorer"
+        TextColor="Black" />
+        
         <!--  Image Section  -->
-        <Frame
-            Padding="80"
-            Background="White"
-            BackgroundColor="WhiteSmoke"
-            BorderColor="White">
-            <Image
-                HeightRequest="200"
-                HorizontalOptions="Center"
-                Source="app_icon.png" />
-        </Frame>
+        <Image
+        HeightRequest="200"
+        HorizontalOptions="Center"
+        Source="signup_illustration.png" />
+        
+      
 
 
         <!--  Email Entry  -->

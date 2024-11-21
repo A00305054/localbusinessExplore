@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Dell\\source\\repos\\localbusinessExplore\\localbusinessExplore.csproj": {}
+    "C:\\Users\\Dell\\Source\\Repos\\localbusinessExplore\\localbusinessExplore.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Dell\\source\\repos\\localbusinessExplore\\localbusinessExplore.csproj": {
+    "C:\\Users\\Dell\\Source\\Repos\\localbusinessExplore\\localbusinessExplore.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Dell\\source\\repos\\localbusinessExplore\\localbusinessExplore.csproj",
+        "projectUniqueName": "C:\\Users\\Dell\\Source\\Repos\\localbusinessExplore\\localbusinessExplore.csproj",
         "projectName": "localbusinessExplore",
-        "projectPath": "C:\\Users\\Dell\\source\\repos\\localbusinessExplore\\localbusinessExplore.csproj",
+        "projectPath": "C:\\Users\\Dell\\Source\\Repos\\localbusinessExplore\\localbusinessExplore.csproj",
         "packagesPath": "C:\\Users\\Dell\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Dell\\source\\repos\\localbusinessExplore\\obj\\",
+        "outputPath": "C:\\Users\\Dell\\Source\\Repos\\localbusinessExplore\\obj\\",
         "projectStyle": "PackageReference",
         "crossTargeting": true,
         "fallbackFolders": [
