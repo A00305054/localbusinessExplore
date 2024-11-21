@@ -2694,3 +2694,11 @@ C:\Users\Dell\Source\Repos\localbusinessExplore\obj\Debug\net9.0-android\stamp\_
 C:\Users\Dell\Source\Repos\localbusinessExplore\obj\Debug\net9.0-android\stamp\_GeneratePackageManagerJava.stamp
 C:\Users\Dell\Source\Repos\localbusinessExplore\obj\Debug\net9.0-android\stamp\_ResolveLibraryProjectImports.stamp
 C:\Users\Dell\Source\Repos\localbusinessExplore\obj\Debug\net9.0-android\resizetizer\r\drawable\home.png
+C:\Users\Dell\Source\Repos\localbusinessExplore\obj\Debug\net9.0-android\resizetizer\r\drawable\event_icon.png
+C:\Users\Dell\Source\Repos\localbusinessExplore\obj\Debug\net9.0-android\resizetizer\r\drawable\explore_icon.png
+C:\Users\Dell\Source\Repos\localbusinessExplore\obj\Debug\net9.0-android\resizetizer\r\drawable\find_location.png
+C:\Users\Dell\Source\Repos\localbusinessExplore\obj\Debug\net9.0-android\resizetizer\r\drawable\food_icon.png
+C:\Users\Dell\Source\Repos\localbusinessExplore\obj\Debug\net9.0-android\resizetizer\r\drawable\grocery_icon.png
+C:\Users\Dell\Source\Repos\localbusinessExplore\obj\Debug\net9.0-android\resizetizer\r\drawable\home_icon.png
+C:\Users\Dell\Source\Repos\localbusinessExplore\obj\Debug\net9.0-android\resizetizer\r\drawable\profile_icon.png
+C:\Users\Dell\Source\Repos\localbusinessExplore\obj\Debug\net9.0-android\resizetizer\r\drawable\shopping_icon.png
