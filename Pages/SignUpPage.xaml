@@ -3,17 +3,24 @@
     x:Class="localbusinessExplore.Pages.SignUpPage"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:vm="clr-namespace:localbusinessExplore.ViewModels"
     Title="Create Account"
     BackgroundColor="White">
+
+    <!-- Set the BindingContext to SignUpViewModel -->
+    <ContentPage.BindingContext>
+        <vm:SignUpViewModel />
+    </ContentPage.BindingContext>
+
     <ScrollView>
         <VerticalStackLayout Padding="20" Spacing="30">
-            <!--  Header Image  -->
+            <!-- Header Image -->
             <Image
                 HeightRequest="200"
                 HorizontalOptions="Center"
                 Source="signup_illustration.png" />
 
-            <!--  Title  -->
+            <!-- Title -->
             <Label
                 FontAttributes="Bold"
                 FontSize="24"
@@ -21,42 +28,42 @@
                 Text="Create a New Account"
                 TextColor="Black" />
 
-            <!--  Name Field  -->
+            <!-- Name Field -->
             <HorizontalStackLayout Spacing="10">
                 <Image
                     HeightRequest="25"
                     Source="user_icon.png"
                     WidthRequest="25" />
                 <Entry
-                    x:Name="nameEntry"
+                    Text="{Binding Name}"
                     BackgroundColor="Transparent"
                     FontSize="16"
                     Placeholder="Name"
                     VerticalOptions="Center" />
             </HorizontalStackLayout>
 
-            <!--  Username Field  -->
+            <!-- Username Field -->
             <HorizontalStackLayout Spacing="10">
                 <Image
                     HeightRequest="25"
                     Source="username_icon.png"
                     WidthRequest="25" />
                 <Entry
-                    x:Name="usernameEntry"
+                    Text="{Binding Username}"
                     BackgroundColor="Transparent"
                     FontSize="16"
                     Placeholder="Username"
                     VerticalOptions="Center" />
             </HorizontalStackLayout>
 
-            <!--  Email Field  -->
+            <!-- Email Field -->
             <HorizontalStackLayout Spacing="10">
                 <Image
                     HeightRequest="25"
                     Source="email_icon.png"
                     WidthRequest="25" />
                 <Entry
-                    x:Name="emailEntry"
+                    Text="{Binding Email}"
                     BackgroundColor="Transparent"
                     FontSize="16"
                     Keyboard="Email"
@@ -64,14 +71,14 @@
                     VerticalOptions="Center" />
             </HorizontalStackLayout>
 
-            <!--  Password Field  -->
+            <!-- Password Field -->
             <HorizontalStackLayout Spacing="10">
                 <Image
                     HeightRequest="25"
                     Source="password_icon.png"
                     WidthRequest="25" />
                 <Entry
-                    x:Name="passwordEntry"
+                    Text="{Binding Password}"
                     BackgroundColor="Transparent"
                     FontSize="16"
                     IsPassword="True"
@@ -79,10 +86,10 @@
                     VerticalOptions="Center" />
             </HorizontalStackLayout>
 
-            <!--  Sign-Up Button  -->
+            <!-- Sign-Up Button -->
             <Button
                 BackgroundColor="#6CC4A1"
-                Clicked="OnSignUpClicked"
+                Command="{Binding SignUpCommand}"
                 CornerRadius="25"
                 FontSize="18"
                 HeightRequest="50"
@@ -93,3 +100,4 @@
         </VerticalStackLayout>
     </ScrollView>
 </ContentPage>
+

@@ -1,4 +1,5 @@
 using System;
+using localbusinessExplore.ViewModels;
 using Microsoft.Maui.Controls;
 
 namespace localbusinessExplore.Pages
@@ -8,8 +9,9 @@ namespace localbusinessExplore.Pages
         public SignUpPage()
         {
             InitializeComponent();
+            BindingContext = new SignUpViewModel();
         }
-
+        /*
         private async void OnSignUpClicked(object sender, EventArgs e)
         {
             try
@@ -33,6 +35,6 @@ namespace localbusinessExplore.Pages
             {
                 await DisplayAlert("Error", $"Something went wrong: {ex.Message}", "OK");
             }
-        }
+        } */
     }
 }
