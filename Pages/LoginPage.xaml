@@ -2,9 +2,14 @@
 <ContentPage
     x:Class="localbusinessExplore.Pages.LoginPage"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
-    
-    
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:viewModels="clr-namespace:localbusinessExplore.ViewModels">
+
+    <!-- Bind the ViewModel -->
+    <ContentPage.BindingContext>
+        <viewModels:LoginViewModel />
+    </ContentPage.BindingContext>
+
     <VerticalStackLayout>
 
         <Label
@@ -73,7 +78,7 @@
         <Button
             Margin="10"
             BackgroundColor="Black"
-            Clicked="OnLoginClicked"
+            Command="{Binding LoginCommand}"
             HeightRequest="50"
             Text="Sign In"
             TextColor="White" />

@@ -1,4 +1,4 @@
-using Microsoft.Maui.Controls;
+/* using Microsoft.Maui.Controls;
 
 namespace localbusinessExplore.Pages
 {
@@ -36,6 +36,32 @@ namespace localbusinessExplore.Pages
         }
 
         // Sign-Up Button Click Event
+        private async void OnSignUpClicked(object sender, EventArgs e)
+        {
+            // Navigate to SignUpPage
+            await Shell.Current.GoToAsync("SignUpPage");
+        }
+    }
+}
+*/
+
+using Firebase.Auth;
+using Microsoft.Maui.Controls;
+using System;
+
+namespace localbusinessExplore.Pages
+{
+    public partial class LoginPage : ContentPage
+    {
+        public LoginPage()
+        {
+            InitializeComponent();
+
+            // Set the BindingContext to the LoginViewModel
+            BindingContext = new ViewModels.LoginViewModel();
+        }
+
+        // Optional: OnSignUpClicked remains as it is, to handle navigation to SignUpPage
         private async void OnSignUpClicked(object sender, EventArgs e)
         {
             // Navigate to SignUpPage
