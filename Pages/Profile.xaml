@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="localbusinessExplore.Pages.Profile"
+             Title="Profile"
+             BackgroundColor="White">
+    <ScrollView>
+        <VerticalStackLayout Spacing="20" Padding="20">
+            <!-- Profile Image -->
+            <Frame CornerRadius="75" HeightRequest="150" WidthRequest="150" HorizontalOptions="Center">
+                <Image Source="profile_icon.png" Aspect="AspectFill" />
+            </Frame>
+
+            <!-- Name -->
+            <Label Text="John Doe"
+                   FontSize="24"
+                   FontAttributes="Bold"
+                   HorizontalOptions="Center" />
+
+            <!-- Contact Info -->
+            <Label Text="Contact: john.doe@example.com"
+                   FontSize="16"
+                   TextColor="Gray"
+                   HorizontalOptions="Center" />
+
+            <!-- Address -->
+            <Label Text="Address: 123 Business Street, Sudbury, ON"
+                   FontSize="16"
+                   TextColor="Gray"
+                   HorizontalOptions="Center" />
+
+            <!-- Business Info Section -->
+            <Frame BorderColor="LightGray" CornerRadius="10" Padding="15">
+                <VerticalStackLayout Spacing="10">
+                    <Label Text="About the Business" FontSize="18" FontAttributes="Bold" />
+                    <Label Text="We are a local business specializing in delivering the best services in Sudbury. Visit us to experience the difference."
+                           TextColor="Black" FontSize="14" />
+                </VerticalStackLayout>
+            </Frame>
+
+            <!-- Edit Profile Button -->
+            <Button Text="Edit Profile"
+                    BackgroundColor="#4CAF50"
+                    TextColor="White"
+                    CornerRadius="20"
+                    WidthRequest="200"
+                    HorizontalOptions="Center" />
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
