@@ -7,7 +7,7 @@
         <VerticalStackLayout Padding="10" Spacing="20">
 
             <!-- Header Section -->
-            <Grid BackgroundColor="#F8F8F8" Padding="10" >
+            <Grid BackgroundColor="#F8F8F8" Padding="10">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="Auto" />
                 </Grid.RowDefinitions>
@@ -84,13 +84,13 @@
 
             <!-- Logout Button -->
             <Button Text="Logout"
-           BackgroundColor="#FF6B6B"
-           TextColor="White"
-           FontAttributes="Bold"
-           CornerRadius="10"
-           HeightRequest="50"
-           Clicked="OnLogoutClicked"
-           Command="{Binding LogoutCommand}" />
+                    BackgroundColor="#FF6B6B"
+                    TextColor="White"
+                    FontAttributes="Bold"
+                    CornerRadius="10"
+                    HeightRequest="50"
+                    Clicked="OnLogoutClicked"
+                    Command="{Binding LogoutCommand}" />
 
             <!-- Footer Navigation -->
             <Grid Padding="5" BackgroundColor="#F8F8F8">
@@ -105,10 +105,9 @@
                 <ImageButton Source="explore_icon.png" Grid.Column="1"
                              HeightRequest="40" WidthRequest="40" />
                 <ImageButton Source="profile_icon.png" Grid.Column="2"
-                             HeightRequest="40" WidthRequest="40" />
+                             HeightRequest="40" WidthRequest="40"
+                             Clicked="OnProfileClicked" />
             </Grid>
-
-         
         </VerticalStackLayout>
     </ScrollView>
 </ContentPage>

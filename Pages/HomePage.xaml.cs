@@ -1,16 +1,24 @@
 using Microsoft.Maui.Controls;
 
-namespace localbusinessExplore.Pages;
-
-public partial class HomePage : ContentPage
+namespace localbusinessExplore.Pages
 {
-	public HomePage()
-	{
-		InitializeComponent();
-	}
-	private void OnLogoutClicked(object sender, EventArgs e)
+    public partial class HomePage : ContentPage
     {
-        // Navigate to LoginPage
-        Shell.Current.GoToAsync("//LoginPage");
+        public HomePage()
+        {
+            InitializeComponent();
+        }
+
+        private async void OnProfileClicked(object sender, EventArgs e)
+        {
+            // Navigate to the Profile Page
+            await Navigation.PushAsync(new Profile());
+        }
+
+        private void OnLogoutClicked(object sender, EventArgs e)
+        {
+            // Handle logout logic (to be implemented)
+            DisplayAlert("Logout", "You have been logged out.", "OK");
+        }
     }
 }
