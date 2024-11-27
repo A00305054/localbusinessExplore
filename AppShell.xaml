@@ -6,6 +6,10 @@
 
     <ShellContent ContentTemplate="{DataTemplate pages:LoginPage}" Route="LoginPage" />
     <ShellContent ContentTemplate="{DataTemplate pages:SignUpPage}" Route="SignUpPage" />
-    <ShellContent Title="Home" ContentTemplate="{DataTemplate pages:HomePage}" Route="HomePage"/>    
+    <ShellContent
+        Title="Home"
+        ContentTemplate="{DataTemplate pages:HomePage}"
+        Route="HomePage" />
+    <ShellContent ContentTemplate="{DataTemplate pages:EventsPage}" Route="EventsPage" />
 
 </Shell>
