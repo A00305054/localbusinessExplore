@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="localbusinessExplore.Pages.SplashScreen"
+             BackgroundColor="White">
+    <Grid>
+        <Image Source="splash_icon.png"
+               HorizontalOptions="Center"
+               VerticalOptions="Center"
+               HeightRequest="200"
+               WidthRequest="200"/>
+        <Label Text="Welcome to Our App!"
+               FontSize="24"
+               HorizontalOptions="Center"
+               VerticalOptions="End"
+               Margin="0,0,0,50" />
+    </Grid>
+</ContentPage>

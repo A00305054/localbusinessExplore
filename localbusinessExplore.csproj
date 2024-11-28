@@ -60,8 +60,8 @@
 	</ItemGroup>
 
 	<ItemGroup>
-		<PackageReference Include="CommunityToolkit.Mvvm" Version="8.0.0" />
-		<PackageReference Include="Firebase.Auth" Version="2.1.0" />
+		
+		<PackageReference Include="Firebase.Auth" Version="1.0.0" />
 		<PackageReference Include="Firebase.Database" Version="1.0.0" />
 		<PackageReference Include="FirebaseAdmin" Version="2.1.0" />
 		<PackageReference Include="Microsoft.Maui.Controls" Version="9.0.10" />
@@ -74,6 +74,12 @@
 			<HintPath>$(TargetFramework)\Microsoft.Maui.Controls.dll</HintPath>
 		</Reference>
 	</ItemGroup>
+
+	<ItemGroup>
+	  <Compile Update="Pages\SplashScreen.xaml.cs">
+	    <DependentUpon>SplashScreen.xaml</DependentUpon>
+	  </Compile>
+	</ItemGroup>
 	
 
 	<ItemGroup>
@@ -81,6 +87,9 @@
 		  <Generator>MSBuild:Compile</Generator>
 		</MauiXaml>
 		<MauiXaml Update="Pages\LoginPage.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+		</MauiXaml>
+		<MauiXaml Update="Pages\SplashScreen.xaml">
 		  <Generator>MSBuild:Compile</Generator>
 		</MauiXaml>
 		<MauiXaml Update="Pages\Profile.xaml">
