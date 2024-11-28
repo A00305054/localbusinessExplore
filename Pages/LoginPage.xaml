@@ -38,7 +38,7 @@
             HeightRequest="60">
             <Entry
                 x:Name="emailEntry"
-                Margin="10"
+                Margin="5"
                 HeightRequest="50"
                 Keyboard="Email"
                 Placeholder="Email"

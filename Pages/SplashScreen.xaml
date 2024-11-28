@@ -7,8 +7,8 @@
         <Image Source="splash_icon.png"
                HorizontalOptions="Center"
                VerticalOptions="Center"
-               HeightRequest="200"
-               WidthRequest="200"/>
+               HeightRequest="300"
+               WidthRequest="300"/>
         <Label Text="Welcome to Our App!"
                FontSize="24"
                HorizontalOptions="Center"

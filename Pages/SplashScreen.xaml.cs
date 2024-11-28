@@ -10,7 +10,21 @@ namespace localbusinessExplore.Pages
         public SplashScreen()
         {
             InitializeComponent();
-            NavigateToLoginPage();
+            //NavigateToLoginPage();
+        }
+
+        protected override async void OnAppearing()
+        {
+            base.OnAppearing();
+
+            // Delay for a few seconds to show the splash screen
+            await Task.Delay(3000);  // 3 seconds delay
+
+            // Navigate to the main app page (AppShell)
+            if (Application.Current is App app)
+            {
+                await app.NavigateToMainPageAsync();
+            }
         }
         private async void NavigateToLoginPage()
         {
