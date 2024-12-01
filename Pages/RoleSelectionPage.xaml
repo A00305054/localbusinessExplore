@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="localbusinessExplore.Pages.RoleSelectionPage"
+             Title="Select Role"
+             BackgroundColor="White">
+    <StackLayout HorizontalOptions="Center" VerticalOptions="Center" Spacing="20">
+        <Label Text="Choose Your Role" FontSize="24" HorizontalOptions="Center" />
+
+        <!-- User Role -->
+        <StackLayout>
+            <Image Source="user_icon.png" HeightRequest="150" WidthRequest="150" />
+            <Button Text="User" FontSize="18" Clicked="OnUserClicked" />
+        </StackLayout>
+
+        <!-- Admin Role -->
+        <StackLayout>
+            <Image Source="admin_icon.png" HeightRequest="150" WidthRequest="150" />
+            <Button Text="Admin" FontSize="18" Clicked="OnAdminClicked" />
+        </StackLayout>
+    </StackLayout>
+</ContentPage>

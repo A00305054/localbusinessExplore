@@ -10,13 +10,19 @@ public partial class App : Application
         InitializeComponent();
         // MainPage = new AppShell();
         // Set the initial MainPage to SplashPage
-        MainPage = new SplashScreen();
+        MainPage = new NavigationPage(new SplashScreen());
     }
 
-    // Method to transition from SplashScreen to Shell after splash is done
-    public async Task NavigateToMainPageAsync()
-    {
-        // Create and set AppShell after the splash screen completes
-        MainPage = new AppShell();
-    }
+    //public async Task NavigateToRoleSelectionPageAsync()
+    //{
+    //    // Navigate from SplashScreen to RoleSelectionPage
+    //    MainPage = new NavigationPage(new RoleSelectionPage());
+    //}
+
+    //// Method to transition from SplashScreen to Shell after splash is done
+    //public async Task NavigateToMainPageAsync()
+    //{
+    //    // Create and set AppShell after the splash screen completes
+    //    MainPage = new AppShell();
+    //}
 }

@@ -20,11 +20,14 @@ namespace localbusinessExplore.Pages
             // Delay for a few seconds to show the splash screen
             await Task.Delay(3000);  // 3 seconds delay
 
+            await Navigation.PushAsync(new RoleSelectionPage());
+
+
             // Navigate to the main app page (AppShell)
-            if (Application.Current is App app)
-            {
-                await app.NavigateToMainPageAsync();
-            }
+            //if (Application.Current is App app)
+            //{
+            //    await app.NavigateToMainPageAsync();
+            //}
         }
         private async void NavigateToLoginPage()
         {
@@ -34,7 +37,7 @@ namespace localbusinessExplore.Pages
                 await Task.Delay(5000);
 
                 // Navigate to LoginPage
-                Application.Current.MainPage = new LoginPage();
+                await Navigation.PushAsync(new RoleSelectionPage());
             }
             catch (Exception ex)
             {

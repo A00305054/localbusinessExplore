@@ -89,6 +89,9 @@
 		<MauiXaml Update="Pages\LoginPage.xaml">
 		  <Generator>MSBuild:Compile</Generator>
 		</MauiXaml>
+		<MauiXaml Update="Pages\RoleSelectionPage.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+		</MauiXaml>
 		<MauiXaml Update="Pages\SplashScreen.xaml">
 		  <Generator>MSBuild:Compile</Generator>
 		</MauiXaml>
