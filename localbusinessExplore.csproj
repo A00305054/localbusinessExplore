@@ -95,6 +95,9 @@
 		<MauiXaml Update="Pages\EditProfile.xaml">
 		  <Generator>MSBuild:Compile</Generator>
 		</MauiXaml>
+		<MauiXaml Update="Pages\PlacesPage.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+		</MauiXaml>
 		<MauiXaml Update="Pages\RoleSelectionPage.xaml">
 		  <Generator>MSBuild:Compile</Generator>
 		</MauiXaml>

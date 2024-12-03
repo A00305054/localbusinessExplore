@@ -1,94 +1,19 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
 using System.Net.Http;
 using System.Net.Http.Json;
 using System.Threading.Tasks;
 using Microsoft.Maui.Controls;
-using System.Linq;
-using System.Collections.Generic;
 using Newtonsoft.Json;
-
+using localbusinessExplore.Entities;
+using localbusinessExplore.ViewModels;
+using System.Collections.ObjectModel;
 
 namespace localbusinessExplore.Pages
 {
-
-    public class GooglePlaces
-    {
-        public class Geometry
-        {
-            public Location location { get; set; }
-            public Viewport viewport { get; set; }
-        }
-
-        public class Location
-        {
-            public double lat { get; set; }
-            public double lng { get; set; }
-        }
-
-        public class Northeast
-        {
-            public double lat { get; set; }
-            public double lng { get; set; }
-        }
-
-        public class Photo
-        {
-            public int height { get; set; }
-            public List<string> html_attributions { get; set; }
-            public string photo_reference { get; set; }
-            public int width { get; set; }
-        }
-
-        public class PlusCode
-        {
-            public string compound_code { get; set; }
-            public string global_code { get; set; }
-        }
-
-        public class Result
-        {
-            public Geometry geometry { get; set; }
-            public string icon { get; set; }
-            public string icon_background_color { get; set; }
-            public string icon_mask_base_uri { get; set; }
-            public string name { get; set; }
-            public List<Photo> photos { get; set; }
-            public string place_id { get; set; }
-            public string reference { get; set; }
-            public string scope { get; set; }
-            public List<string> types { get; set; }
-            public string vicinity { get; set; }
-            public string business_status { get; set; }
-            public PlusCode plus_code { get; set; }
-        }
-
-        public class Root
-        {
-            public List<object> html_attributions { get; set; }
-            public List<Result> results { get; set; }
-            public string status { get; set; }
-        }
-
-        public class Southwest
-        {
-            public double lat { get; set; }
-            public double lng { get; set; }
-        }
-
-        public class Viewport
-        {
-            public Northeast northeast { get; set; }
-            public Southwest southwest { get; set; }
-        }
-
-
-    }
-
     public partial class HomePage : ContentPage
     {
-
-        //https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=46.490001,-81.010002&radius=1500&type=business&key=AIzaSyCtY98KNBJYOX4AUmRX9NxXhj_nsQ_wp8k
-
-
         private const string GooglePlacesApiKey = "AIzaSyCtY98KNBJYOX4AUmRX9NxXhj_nsQ_wp8k";
         private const string GooglePlacesApiUrl = "https://maps.googleapis.com/maps/api/place/nearbysearch/json";
 
@@ -101,30 +26,49 @@ namespace localbusinessExplore.Pages
         {
             try
             {
-                // Get the user's current location
-                double latitude = 46.490001; // Sudbury, ON, Canada
+                // Get the user's current location (Hardcoded for Sudbury, ON)
+                double latitude = 46.490001;
                 double longitude = -81.010002;
 
-                //  correct API key variable
+                // Construct the URL for the API call
                 string url = $"{GooglePlacesApiUrl}?location={latitude},{longitude}&radius=1500&type=business&key={GooglePlacesApiKey}";
 
                 using var httpClient = new HttpClient();
-                var response = await httpClient.GetFromJsonAsync<GooglePlaces.Root>(url);
+                var response = await httpClient.GetFromJsonAsync<GooglePlaces>(url);
 
+                // Access the 'results' property, not 'result'
                 if (response?.results != null && response.results.Any())
                 {
-
                     var places = response.results;
+                    var placeList = new List<Place>();
 
-                    string message = "";
-
-                    // Extract business names
+                    // Extract business details
                     foreach (var place in places)
                     {
-                        message += "," + place.name;
+                        var business = new Place
+                        {
+                            Name = place.name,
+                            Address = place.vicinity, // Address or vicinity of the place
+                            PhoneNumber = "N/A", // Phone number (not provided in API structure here)
+                            Rating = place.rating?.ToString() ?? "N/A", // Rating (if available)
+                            OpeningHours = place.opening_hours?.weekday_text != null
+                                ? string.Join(", ", place.opening_hours.weekday_text)
+                                : "N/A", // Opening hours (if available)
+                            BusinessStatus = place.business_status ?? "N/A", // Business status (if available)
+                            Location = place.geometry?.location != null
+                                ? $"{place.geometry.location.lat}, {place.geometry.location.lng}"
+                                : "N/A", // Location (latitude, longitude)
+                            Photos = place.photos?.Select(p => p.photo_reference).ToList() ?? new List<string>(), // Photos (if available)
+                        };
+                        placeList.Add(business);
                     }
-                    await DisplayAlert("Places", message, "OK");
 
+                    // Create a new PlacesPage and pass the data
+                    var placesPage = new PlacesPage();
+                    placesPage.BindingContext = new PlacesViewModel { Places = new ObservableCollection<Place>(placeList) };
+
+                    // Navigate to the new page
+                    await Navigation.PushAsync(placesPage);
                 }
                 else
                 {
@@ -137,6 +81,7 @@ namespace localbusinessExplore.Pages
             }
         }
 
+
         private async void OnProfileClicked(object sender, EventArgs e)
         {
             await Navigation.PushAsync(new Profile());
@@ -147,5 +92,4 @@ namespace localbusinessExplore.Pages
             DisplayAlert("Logout", "You have been logged out.", "OK");
         }
     }
-
 }

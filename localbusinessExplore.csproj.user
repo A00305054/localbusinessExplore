@@ -3,8 +3,8 @@
   <PropertyGroup>
     <IsFirstTimeProjectOpen>False</IsFirstTimeProjectOpen>
     <ActiveDebugFramework>net9.0-android</ActiveDebugFramework>
-    <ActiveDebugProfile>Pixel 5 - API 34 (Android 14.0 - API 34)</ActiveDebugProfile>
-    <SelectedPlatformGroup>Emulator</SelectedPlatformGroup>
+    <ActiveDebugProfile>Samsung SM-S921W (Android 14.0 - API 34)</ActiveDebugProfile>
+    <SelectedPlatformGroup>PhysicalDevice</SelectedPlatformGroup>
     <DefaultDevice>pixel_5_-_api_34</DefaultDevice>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|net9.0-android|AnyCPU'">
@@ -21,6 +21,9 @@
       <SubType>Designer</SubType>
     </MauiXaml>
     <MauiXaml Update="Pages\EditProfile.xaml">
+      <SubType>Designer</SubType>
+    </MauiXaml>
+    <MauiXaml Update="Pages\PlacesPage.xaml">
       <SubType>Designer</SubType>
     </MauiXaml>
     <MauiXaml Update="Pages\RoleSelectionPage.xaml">
