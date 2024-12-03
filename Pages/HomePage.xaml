@@ -28,10 +28,16 @@
             </Grid>
 
             <!-- Welcome Text -->
-            <Label Text="Explore Businesses Near You" 
-                   FontSize="18" 
-                   HorizontalOptions="Center" 
-                   FontAttributes="Bold" />
+            <Button Text="Explore Businesses Near You"
+        FontSize="18"
+        FontAttributes="Bold"
+        HorizontalOptions="Center"
+        BackgroundColor="#007AFF"
+        TextColor="White"
+        CornerRadius="10"
+        HeightRequest="50"
+        Clicked="OnExploreClicked" />
+
 
             <!-- Location Banner -->
             <Image Source="find_location.png"
