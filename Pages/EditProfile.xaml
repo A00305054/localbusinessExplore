@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="localbusinessExplore.Pages.EditProfile"
+             Title="Edit Profile"
+             BackgroundColor="White">
+    <VerticalStackLayout Spacing="20" Padding="20">
+        <!-- Profile Image Edit Section -->
+        <Frame CornerRadius="75" HeightRequest="150" WidthRequest="150" HorizontalOptions="Center">
+            <Image Source="profile_icon.png" Aspect="AspectFill" />
+        </Frame>
+        <Button Text="Change Profile Picture"
+                    BackgroundColor="#2196F3"
+                    TextColor="White"
+                    CornerRadius="20"
+                    WidthRequest="200"
+                    HorizontalOptions="Center" />
+
+        <!-- Edit Fields -->
+        <Entry Placeholder="Name" Text="John Doe" FontSize="16" />
+        <Entry Placeholder="Email" Text="john.doe@example.com" FontSize="16" Keyboard="Email" />
+        <Entry Placeholder="Address" Text="123 Business Street, Sudbury, ON" FontSize="16" />
+        <Entry Placeholder="Age" Text="30" FontSize="16" Keyboard="Numeric" />
+        <Entry Placeholder="Nationality" Text="Canadian" FontSize="16" />
+        <Editor Placeholder="Skills (e.g., Business Management, Marketing)" Text="Business Management" HeightRequest="100" />
+
+        <!-- Save Button -->
+        <Button Text="Save Changes"
+                    BackgroundColor="#4CAF50"
+                    TextColor="White"
+                    CornerRadius="20"
+                    WidthRequest="200"
+                    HorizontalOptions="Center" />
+    </VerticalStackLayout>
+</ContentPage>

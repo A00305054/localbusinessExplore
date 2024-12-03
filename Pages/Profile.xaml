@@ -44,7 +44,8 @@
                     TextColor="White"
                     CornerRadius="20"
                     WidthRequest="200"
-                    HorizontalOptions="Center" />
+                    HorizontalOptions="Center"
+                    Clicked="OnEditProfileClicked" />
         </VerticalStackLayout>
     </ScrollView>
 </ContentPage>
