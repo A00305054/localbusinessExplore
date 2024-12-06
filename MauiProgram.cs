@@ -1,7 +1,7 @@
 ﻿using Microsoft.Extensions.Logging;
 using localbusinessExplore.ViewModels;
 using localbusinessExplore.Entities;
-
+using CommunityToolkit.Maui;  // Add this namespace
 
 namespace localbusinessExplore;
 
@@ -12,6 +12,7 @@ public static class MauiProgram
         var builder = MauiApp.CreateBuilder();
         builder
             .UseMauiApp<App>()
+            .UseMauiCommunityToolkit()  // Add this line
             .ConfigureFonts(fonts =>
             {
                 fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
