@@ -44,7 +44,6 @@ namespace localbusinessExplore.Pages
     }
 }
 */
-
 using Firebase.Auth;
 using Microsoft.Maui.Controls;
 using System;
@@ -55,6 +54,7 @@ namespace localbusinessExplore.Pages
     {
         public LoginPage()
         {
+
             InitializeComponent();
 
             // Set the BindingContext to the LoginViewModel

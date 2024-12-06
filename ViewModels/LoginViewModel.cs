@@ -38,6 +38,9 @@ namespace localbusinessExplore.ViewModels
 
         public LoginViewModel()
         {
+            _email = "bibas@gmail.com"; // Default email
+            _password = "bibas123";  // Default password
+
             LoginCommand = new Command(async () => await Login());
         }
 
