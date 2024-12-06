@@ -29,14 +29,15 @@
 
             <!-- Welcome Text -->
             <Button Text="Explore Businesses Near You"
-        FontSize="18"
-        FontAttributes="Bold"
-        HorizontalOptions="Center"
-        BackgroundColor="#007AFF"
-        TextColor="White"
-        CornerRadius="10"
-        HeightRequest="50"
-        Clicked="OnExploreClicked" />
+FontSize="18"
+FontAttributes="Bold"
+HorizontalOptions="Center"
+BackgroundColor="#007AFF"
+TextColor="White"
+CornerRadius="10"
+HeightRequest="50"
+Clicked="OnExploreClicked" />
+
 
 
             <!-- Location Banner -->
@@ -87,6 +88,8 @@
                     </StackLayout>
                 </Grid>
             </StackLayout>
+
+           
 
             <!-- Logout Button -->
             <Button Text="Logout"
