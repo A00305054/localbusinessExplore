@@ -87,9 +87,19 @@ namespace localbusinessExplore.Pages
             await Navigation.PushAsync(new Profile());
         }
 
-        private void OnLogoutClicked(object sender, EventArgs e)
+        private async void OnLogoutClicked(object sender, EventArgs e)
         {
-            DisplayAlert("Logout", "You have been logged out.", "OK");
+            bool shouldLogout = await Shell.Current.DisplayAlert("Logout", "Are you sure you want to log out?", "Yes", "No");
+
+            if (shouldLogout)
+            {
+                // Navigate to the LoginPage
+                await Shell.Current.GoToAsync($"///{nameof(LoginPage)}");
+            }
+            else
+            {
+                // Stay on the HomePage (do nothing)
+            }
         }
     }
 }
