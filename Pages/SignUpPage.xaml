@@ -29,7 +29,7 @@
                 TextColor="Black" />
 
             <!-- Name Field -->
-            <HorizontalStackLayout Spacing="10">
+            <HorizontalStackLayout Spacing="10" HorizontalOptions="Center">
                 <Image
                     HeightRequest="25"
                     Source="user_icon.png"
@@ -43,10 +43,10 @@
             </HorizontalStackLayout>
 
             <!-- Username Field -->
-            <HorizontalStackLayout Spacing="10">
+            <HorizontalStackLayout Spacing="10" HorizontalOptions="Center">
                 <Image
                     HeightRequest="25"
-                    Source="username_icon.png"
+                    Source="profile_icon.png"
                     WidthRequest="25" />
                 <Entry
                     Text="{Binding Username}"
@@ -57,7 +57,7 @@
             </HorizontalStackLayout>
 
             <!-- Email Field -->
-            <HorizontalStackLayout Spacing="10">
+            <HorizontalStackLayout Spacing="10" HorizontalOptions="Center">
                 <Image
                     HeightRequest="25"
                     Source="email_icon.png"
@@ -72,10 +72,10 @@
             </HorizontalStackLayout>
 
             <!-- Password Field -->
-            <HorizontalStackLayout Spacing="10">
+            <HorizontalStackLayout Spacing="10" HorizontalOptions="Center">
                 <Image
                     HeightRequest="25"
-                    Source="password_icon.png"
+                    Source="lock_icon.png"
                     WidthRequest="25" />
                 <Entry
                     Text="{Binding Password}"
