@@ -4,10 +4,12 @@
              x:Class="localbusinessExplore.Pages.HomePage"
              Title="Home">
     <ScrollView>
-        <VerticalStackLayout Padding="10" Spacing="20">
+        <VerticalStackLayout Padding="10"
+                             Spacing="20">
 
             <!-- Header Section -->
-            <Grid BackgroundColor="#F8F8F8" Padding="10">
+            <Grid BackgroundColor="#F8F8F8"
+                  Padding="10">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="Auto" />
                 </Grid.RowDefinitions>
@@ -16,33 +18,34 @@
                     <ColumnDefinition Width="40" />
                 </Grid.ColumnDefinitions>
 
-                <Entry Placeholder="Search..." Grid.Column="0" 
-                       VerticalOptions="Center" 
-                       BackgroundColor="#FFFFFF" 
-                       Margin="5" 
-                       HeightRequest="40"
-                       />
-                <ImageButton Source="menu_icon.png" Grid.Column="1" 
+                <Entry Placeholder="Search..."
+                       Grid.Column="0"
+                       VerticalOptions="Center"
+                       BackgroundColor="#FFFFFF"
+                       Margin="5"
+                       HeightRequest="40" />
+                <ImageButton Source="menu_icon.png"
+                             Grid.Column="1"
                              VerticalOptions="Center"
-                             HeightRequest="30" WidthRequest="30" />
+                             HeightRequest="30"
+                             WidthRequest="30" />
             </Grid>
 
             <!-- Welcome Text -->
             <Button Text="Explore Businesses Near You"
-FontSize="18"
-FontAttributes="Bold"
-HorizontalOptions="Center"
-BackgroundColor="#007AFF"
-TextColor="White"
-CornerRadius="10"
-HeightRequest="50"
-Clicked="OnExploreClicked" />
-
+                    FontSize="18"
+                    FontAttributes="Bold"
+                    HorizontalOptions="Center"
+                    BackgroundColor="#007AFF"
+                    TextColor="White"
+                    CornerRadius="10"
+                    HeightRequest="50"
+                    Clicked="OnExploreClicked" />
 
 
             <!-- Location Banner -->
             <Image Source="find_location.png"
-                   HeightRequest="200" 
+                   HeightRequest="200"
                    WidthRequest="250"
                    HorizontalOptions="Center" />
 
@@ -59,37 +62,60 @@ Clicked="OnExploreClicked" />
                     </Grid.ColumnDefinitions>
 
                     <!-- Categories Text -->
-                    <Label Text="Categories" Grid.Row="0" Grid.Column="0" FontAttributes="Bold" />
-                    <Label Text="Show All" Grid.Row="0" Grid.Column="1" 
-                           HorizontalTextAlignment="End" 
+                    <Label Text="Categories"
+                           Grid.Row="0"
+                           Grid.Column="0"
+                           FontAttributes="Bold" />
+                    <Label Text="Show All"
+                           Grid.Row="0"
+                           Grid.Column="1"
+                           HorizontalTextAlignment="End"
                            TextColor="#007AFF" />
 
                     <!-- Categories Icons -->
-                    <StackLayout Orientation="Horizontal" Grid.Row="1" Spacing="20">
-                        <VerticalStackLayout HorizontalOptions="Center" Spacing="5">
-                            <Image Source="food_icon.png" HeightRequest="60" WidthRequest="60" />
-                            <Label Text="Food" HorizontalTextAlignment="Center" />
+                    <StackLayout Orientation="Horizontal"
+                                 Grid.Row="1"
+                                 Spacing="20">
+                        <VerticalStackLayout HorizontalOptions="Center"
+                                             Spacing="5">
+                            <Image Source="food_icon.png"
+                                   HeightRequest="60"
+                                   WidthRequest="60" />
+                            <Label Text="Food"
+                                   HorizontalTextAlignment="Center" />
                         </VerticalStackLayout>
 
-                        <VerticalStackLayout HorizontalOptions="Center" Spacing="5">
-                            <Image Source="grocery_icon.png" HeightRequest="60" WidthRequest="60" />
-                            <Label Text="Grocery" HorizontalTextAlignment="Center" />
+                        <VerticalStackLayout HorizontalOptions="Center"
+                                             Spacing="5">
+                            <Image Source="grocery_icon.png"
+                                   HeightRequest="60"
+                                   WidthRequest="60" />
+                            <Label Text="Grocery"
+                                   HorizontalTextAlignment="Center" />
                         </VerticalStackLayout>
 
-                        <VerticalStackLayout HorizontalOptions="Center" Spacing="5">
-                            <Image Source="shopping_icon.png" HeightRequest="60" WidthRequest="60" />
-                            <Label Text="Shopping" HorizontalTextAlignment="Center" />
+                        <VerticalStackLayout HorizontalOptions="Center"
+                                             Spacing="5">
+                            <Image Source="shopping_icon.png"
+                                   HeightRequest="60"
+                                   WidthRequest="60" />
+                            <Label Text="Shopping"
+                                   HorizontalTextAlignment="Center" />
                         </VerticalStackLayout>
 
-                        <VerticalStackLayout HorizontalOptions="Center" Spacing="5">
-                            <Image Source="event_icon.png" HeightRequest="60" WidthRequest="60" />
-                            <Label Text="Events" HorizontalTextAlignment="Center" />
+                        <VerticalStackLayout HorizontalOptions="Center"
+                                             Spacing="5">
+                            <Image Source="event_icon.png"
+                                   HeightRequest="60"
+                                   WidthRequest="60" />
+                            <Label Text="Events"
+                                   HorizontalTextAlignment="Center" />
                         </VerticalStackLayout>
                     </StackLayout>
                 </Grid>
             </StackLayout>
 
-           
+
 
             <!-- Logout Button -->
             <Button Text="Logout"
@@ -102,19 +128,26 @@ Clicked="OnExploreClicked" />
                     Command="{Binding LogoutCommand}" />
 
             <!-- Footer Navigation -->
-            <Grid Padding="5" BackgroundColor="#F8F8F8">
+            <Grid Padding="5"
+                  BackgroundColor="#F8F8F8">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*" />
                     <ColumnDefinition Width="*" />
                     <ColumnDefinition Width="*" />
                 </Grid.ColumnDefinitions>
 
-                <ImageButton Source="home_icon.png" Grid.Column="0"
-                             HeightRequest="40" WidthRequest="40" />
-                <ImageButton Source="explore_icon.png" Grid.Column="1"
-                             HeightRequest="40" WidthRequest="40" />
-                <ImageButton Source="profile_icon.png" Grid.Column="2"
-                             HeightRequest="40" WidthRequest="40"
+                <ImageButton Source="home_icon.png"
+                             Grid.Column="0"
+                             HeightRequest="40"
+                             WidthRequest="40" />
+                <ImageButton Source="explore_icon.png"
+                             Grid.Column="1"
+                             HeightRequest="40"
+                             WidthRequest="40" />
+                <ImageButton Source="profile_icon.png"
+                             Grid.Column="2"
+                             HeightRequest="40"
+                             WidthRequest="40"
                              Clicked="OnProfileClicked" />
             </Grid>
         </VerticalStackLayout>

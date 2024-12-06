@@ -1,96 +1,120 @@
-<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage
-    x:Class="localbusinessExplore.Pages.LoginPage"
-    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:viewModels="clr-namespace:localbusinessExplore.ViewModels">
+<ContentPage x:Class="localbusinessExplore.Pages.LoginPage"
+             xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewModels="clr-namespace:localbusinessExplore.ViewModels">
 
     <!-- Bind the ViewModel -->
     <ContentPage.BindingContext>
         <viewModels:LoginViewModel />
     </ContentPage.BindingContext>
 
-    <VerticalStackLayout>
+    <VerticalStackLayout Padding="20"
+                         Spacing="15"
+                         BackgroundColor="White">
 
-        <Label
-        FontAttributes="Bold"
-        FontSize="20"
-        HorizontalTextAlignment="Center"
-        Text="Sign In to Local Business Explorer"
-        TextColor="Black" />
-        
         <!--  Image Section  -->
-        <Image
-        HeightRequest="200"
-        HorizontalOptions="Center"
-        Source="signup_illustration.png" />
-        
-      
+        <Image HeightRequest="200"
+               HorizontalOptions="Center"
+               Source="signup_illustration.png" />
 
-
-        <!--  Email Entry  -->
-        <Frame
-            Margin="10"
-            Padding="10"
-            BorderColor="Black"
-            CornerRadius="10"
-            HasShadow="False"
-            HeightRequest="60">
-            <Entry
-                x:Name="emailEntry"
-                Margin="5"
-                HeightRequest="50"
-                Keyboard="Email"
-                Placeholder="Email"
-                PlaceholderColor="Gray"
-                Text="{Binding Email}"
-                TextColor="Black" />
-        </Frame>
-
-        <!--  Password Entry  -->
-        <Frame
-            Margin="10"
-            Padding="10"
-            BorderColor="Black"
-            CornerRadius="10"
-            HasShadow="False"
-            HeightRequest="60">
+        <!-- Welcome Text -->
+        <Label Text="Welcome"
+               FontSize="28"
+               FontAttributes="Bold"
+               HorizontalOptions="Center"
+               TextColor="Black" />
+        <!--Email entry-->
+        <Frame CornerRadius="30"
+               HeightRequest="50"
+               Margin="0,10"
+               Padding="0"
+               BackgroundColor="#F7F7F7"
+               HorizontalOptions="FillAndExpand">
             <Grid>
-                <Entry
-                    x:Name="passwordEntry"
-                    Margin="10"
-                    HeightRequest="50"
-                    IsPassword="True"
-                    Placeholder="Password"
-                    PlaceholderColor="Gray"
-                    Text="{Binding Password}"
-                    TextColor="Black" />
-                <ImageButton
-                    BackgroundColor="Transparent"
-                    HeightRequest="25"
-                    HorizontalOptions="End"
-                    Source="eye.png"
-                    VerticalOptions="Center"
-                    WidthRequest="50" />
+                <!-- Define three columns: one for the image, one for the Entry -->
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+                <!-- Image on the left side with margin to move it slightly right -->
+                <Image Source="email_icon.png"
+                       WidthRequest="30"
+                       HeightRequest="30"
+                       VerticalOptions="Center"
+                       Grid.Column="0"
+                       Margin="8,0,0,0" />
+                <!-- Margin to shift image to the right -->
+
+                <!-- Email Entry field -->
+                <Entry x:Name="emailEntry"
+                       Placeholder="Email ID"
+                       PlaceholderColor="#999"
+                       Text="{Binding Email}"
+                       TextColor="Black"
+                       BackgroundColor="Transparent"
+                       HorizontalOptions="Fill"
+                       Grid.Column="1"
+                       HeightRequest="50"
+                       Margin="10" />
+                <!-- Margin for padding between entry and image -->
             </Grid>
         </Frame>
-        <!--  Sign In Button  -->
-        <Button
-            Margin="10"
-            BackgroundColor="Black"
-            Command="{Binding LoginCommand}"
-            HeightRequest="50"
-            Text="Sign In"
-            TextColor="White" />
 
+        <!-- Password Entry -->
+        <Frame CornerRadius="30"
+               HeightRequest="50"
+               Margin="0,10"
+               Padding="0"
+               BackgroundColor="#F7F7F7"
+               HorizontalOptions="FillAndExpand">
+            <Grid>
+                <!-- Define two columns: one for the image, one for the Entry -->
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="Auto" />
+                </Grid.ColumnDefinitions>
 
-        <!--  Sign Up Text  -->
+                <!-- Image on the left side, with margin to move it slightly right -->
+                <Image Source="lock_icon.png"
+                       WidthRequest="30"
+                       HeightRequest="30"
+                       VerticalOptions="Center"
+                       Grid.Column="0"
+                       Margin="8,0,0,0" />
+                <!-- Adjusted margin to move the image to the right -->
+
+                <!-- Password Entry field -->
+                <Entry x:Name="passwordEntry"
+                       Margin="10"
+                       HeightRequest="50"
+                       IsPassword="True"
+                       Placeholder="Password"
+                       PlaceholderColor="Gray"
+                       Text="{Binding Password}"
+                       TextColor="Black"
+                       Grid.Column="1" />
+
+                
+            </Grid>
+        </Frame>
+
+        <!-- Log In Button -->
+        <Button Text="Log in"
+                BackgroundColor="#7ADFC0"
+                TextColor="White"
+                CornerRadius="25"
+                HeightRequest="50"
+                FontAttributes="Bold"
+                Command="{Binding LoginCommand}" />
+
         <!--  Sign Up Link  -->
-        <Button
-            BackgroundColor="Transparent"
-            Clicked="OnSignUpClicked"
-            HeightRequest="40"
-            Text="Not a user? Sign up here"
-            TextColor="Blue" />
+        <Button BackgroundColor="Transparent"
+                Clicked="OnSignUpClicked"
+                HeightRequest="40"
+                Text="Not a user? Sign up here"
+                TextColor="Blue" />
+
     </VerticalStackLayout>
 </ContentPage>
