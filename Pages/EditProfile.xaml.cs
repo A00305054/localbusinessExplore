@@ -1,5 +1,6 @@
 using localbusinessExplore.Helpers;
 using System;
+using System.Xml;
 
 namespace localbusinessExplore.Pages
 {
@@ -11,8 +12,28 @@ namespace localbusinessExplore.Pages
         {
             InitializeComponent();
             _firebaseHelper = new FirebaseHelper();
+            LoadProfileData();
         }
+        private async void LoadProfileData()
+        {
+            try
+            {
+                // Fetch the profile data from Firebase
+                var profileData = await _firebaseHelper.GetProfileData();
 
+                // Display the fetched data on the page
+                nameEntry.Text = profileData?.Name ?? "Name not set";
+                emailEntry.Text = profileData?.Email ?? "Email not set";
+                addressEntry.Text = profileData?.Address ?? "Address not set";
+                ageEntry.Text = profileData?.Age ?? "Age not set";
+                nationalityEntry.Text = profileData?.Nationality ?? "Nationality not set";
+                skillsEditor.Text = profileData?.Skills ?? "Skills not set";
+            }
+            catch (Exception ex)
+            {
+                await DisplayAlert("Error", $"Failed to load profile data: {ex.Message}", "OK");
+            }
+        }
         private async void OnSaveChangesClicked(object sender, EventArgs e)
         {
             string name = nameEntry.Text;
