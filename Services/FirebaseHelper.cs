@@ -37,5 +37,39 @@ namespace localbusinessExplore.Helpers
                 .Child("Profile")
                 .OnceSingleAsync<dynamic>();
         }
+
+        // Add restaurant data
+        public async Task AddRestaurant(string restaurantId, string name, string location, double rating)
+        {
+            await _firebaseClient
+                .Child("Restaurants")
+                .Child(restaurantId) // Use restaurantId as the unique identifier
+                .PutAsync(new
+                {
+                    Name = name,
+                    Location = location,
+                    Rating = rating
+                });
+        }
+
+        // Get all restaurants
+        public async Task<List<dynamic>> GetAllRestaurants()
+        {
+            var restaurants = await _firebaseClient
+                .Child("Restaurants")
+                .OnceAsync<dynamic>();
+
+            var result = new List<dynamic>();
+            foreach (var restaurant in restaurants)
+            {
+                result.Add(new
+                {
+                    Id = restaurant.Key,
+                    Data = restaurant.Object
+                });
+            }
+
+            return result;
+        }
     }
 }

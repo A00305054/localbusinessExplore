@@ -11,5 +11,7 @@
         ContentTemplate="{DataTemplate pages:HomePage}"
         Route="HomePage" />
     <ShellContent ContentTemplate="{DataTemplate pages:EventsPage}" Route="EventsPage" />
+    <ShellContent ContentTemplate="{DataTemplate pages:MapPage}" Route="MapPage" />
+
 
 </Shell>

@@ -70,6 +70,8 @@
 		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="9.0.0" />
 		<PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="9.0.0" />
 <PackageReference Include="CommunityToolkit.Mvvm" Version="8.0.0" />
+<PackageReference Include="Microsoft.Maui.Controls.Maps" Version="9.0.12" />
+<PackageReference Include="Microsoft.Maui.Essentials" Version="9.0.12" />
 		<PackageReference Include="System.Reactive" Version="5.0.0" />
 
 		<Reference Include="Microsoft.Maui.Controls">
@@ -95,6 +97,9 @@
 		  <Generator>MSBuild:Compile</Generator>
 		</MauiXaml>
 		<MauiXaml Update="Pages\EditProfile.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+		</MauiXaml>
+		<MauiXaml Update="Pages\MapPage.xaml">
 		  <Generator>MSBuild:Compile</Generator>
 		</MauiXaml>
 		<MauiXaml Update="Pages\PlacesPage.xaml">

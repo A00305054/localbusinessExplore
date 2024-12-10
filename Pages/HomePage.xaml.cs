@@ -22,6 +22,12 @@ namespace localbusinessExplore.Pages
             InitializeComponent();
         }
 
+        private async void OnShowAllTapped(object sender, EventArgs e)
+        {
+            // Navigate to the MapPage
+            await Navigation.PushAsync(new MapPage());
+        }
+
         private async void OnExploreClicked(object sender, EventArgs e)
         {
             try

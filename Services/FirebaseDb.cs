@@ -39,6 +39,8 @@ namespace localbusinessExplore.Services
                 StartDate = eventRecord.Object.StartDate,
                 Address = eventRecord.Object.Address
             }).ToList();
+
+
         }
     }
 

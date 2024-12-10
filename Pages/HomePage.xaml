@@ -66,11 +66,17 @@
                            Grid.Row="0"
                            Grid.Column="0"
                            FontAttributes="Bold" />
+                    
+                    
                     <Label Text="Show All"
-                           Grid.Row="0"
-                           Grid.Column="1"
-                           HorizontalTextAlignment="End"
-                           TextColor="#007AFF" />
+       Grid.Row="0"
+       Grid.Column="1"
+       HorizontalTextAlignment="End"
+       TextColor="#007AFF">
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="OnShowAllTapped" />
+                        </Label.GestureRecognizers>
+                    </Label>
 
                     <!-- Categories Icons -->
                     <StackLayout Orientation="Horizontal"
