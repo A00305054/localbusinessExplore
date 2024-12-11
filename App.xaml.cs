@@ -19,10 +19,10 @@ public partial class App : Application
     //    MainPage = new NavigationPage(new RoleSelectionPage());
     //}
 
-    //// Method to transition from SplashScreen to Shell after splash is done
-    //public async Task NavigateToMainPageAsync()
-    //{
-    //    // Create and set AppShell after the splash screen completes
-    //    MainPage = new AppShell();
-    //}
+    // Method to transition from SplashScreen to Shell after splash is done
+    public async Task NavigateToMainPageAsync()
+    {
+        // Create and set AppShell after the splash screen completes
+        MainPage = new AppShell();
+    }
 }

@@ -9,6 +9,12 @@ using Newtonsoft.Json;
 using localbusinessExplore.Entities;
 using localbusinessExplore.ViewModels;
 using System.Collections.ObjectModel;
+using Microsoft.Maui.Controls.Maps;
+using Microsoft.Maui.Maps;
+using Microsoft.Maui.Controls;
+using Microsoft.Maui.Devices.Sensors;
+using Location = Microsoft.Maui.Devices.Sensors.Location;
+
 
 namespace localbusinessExplore.Pages
 {
@@ -20,12 +26,41 @@ namespace localbusinessExplore.Pages
         public HomePage()
         {
             InitializeComponent();
+            //LoadSudburyLocation();
+        }
+
+        protected override void OnAppearing()
+        {
+            base.OnAppearing();
+            LoadSudburyLocation(); // Call the method when the page appears
+        }
+
+        private void LoadSudburyLocation()
+        {
+            // Coordinates for Greater Sudbury, Ontario
+            var sudburyCoordinates = new Location(46.52249923144501, -80.94380543893604);
+            var mapSpan = MapSpan.FromCenterAndRadius(sudburyCoordinates, Distance.FromKilometers(1));  // Set the zoom level
+
+            // Move the map to Greater Sudbury location
+            MapControl.MoveToRegion(mapSpan);
+
+            // Optionally, add a pin at the center of the city
+            var sudburyPin = new Pin
+            {
+                Label = "New Sudbury Center, Ontario",
+                Address = "Sudbury, ON, Canada",
+                Type = PinType.Place,
+                Location = sudburyCoordinates
+            };
+
+            // Add the pin to the map
+            MapControl.Pins.Add(sudburyPin);
         }
 
         private async void OnShowAllTapped(object sender, EventArgs e)
         {
             // Navigate to the MapPage
-            await Navigation.PushAsync(new MapPage());
+            //await Navigation.PushAsync(new MapPage());
         }
 
         private async void OnExploreClicked(object sender, EventArgs e)
@@ -94,6 +129,27 @@ namespace localbusinessExplore.Pages
         }
 
         private async void OnLogoutClicked(object sender, EventArgs e)
+        {
+            bool shouldLogout = await Shell.Current.DisplayAlert("Logout", "Are you sure you want to log out?", "Yes", "No");
+
+            if (shouldLogout)
+            {
+                // Navigate to the LoginPage
+                await Shell.Current.GoToAsync($"///{nameof(LoginPage)}");
+            }
+            else
+            {
+                // Stay on the HomePage (do nothing)
+            }
+        }
+
+        private async void ImageButton_Clicked(object sender, EventArgs e)
+        {
+            // Navigate to the MapPage
+            await Navigation.PushAsync(new MapPage());
+        }
+
+        private async void ImageButton_Clicked_1(object sender, EventArgs e)
         {
             bool shouldLogout = await Shell.Current.DisplayAlert("Logout", "Are you sure you want to log out?", "Yes", "No");
 
