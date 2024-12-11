@@ -22,12 +22,12 @@ namespace localbusinessExplore.Pages
                 var profileData = await _firebaseHelper.GetProfileData();
 
                 // Display the fetched data on the page
-                nameLabel.Text = profileData?.Name ?? "Name not set";
-                emailLabel.Text = profileData?.Email ?? "Email not set";
-                addressLabel.Text = profileData?.Address ?? "Address not set";
-                ageLabel.Text = profileData?.Age ?? "Age not set";
-                nationalityLabel.Text = profileData?.Nationality ?? "Nationality not set";
-                skillsLabel.Text = profileData?.Skills ?? "Skills not set";
+                nameLabel.Text = "Name: "+profileData?.Name ?? "Name not set";
+                emailLabel.Text = "Email: " + profileData?.Email ?? "Email not set";
+                addressLabel.Text = "City: " + profileData?.Address ?? "Address not set";
+                ageLabel.Text = "Age: " + profileData?.Age ?? "Age not set";
+                nationalityLabel.Text = "Nationality: " + profileData?.Nationality ?? "Nationality not set";
+                //skillsLabel.Text ="Skills: " +profileData?.Skills ?? "Skills not set";
             }
             catch (Exception ex)
             {

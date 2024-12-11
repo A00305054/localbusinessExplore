@@ -90,6 +90,12 @@
 	
 
 	<ItemGroup>
+		<MauiXaml Update="Pages\FoodCategory.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+		</MauiXaml>
+		<MauiXaml Update="Pages\GroceryCategory.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+		</MauiXaml>
 		<MauiXaml Update="Pages\HomePage.xaml">
 		  <Generator>MSBuild:Compile</Generator>
 		</MauiXaml>

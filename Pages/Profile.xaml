@@ -12,19 +12,19 @@
             </Frame>
 
             <!-- Name -->
-            <Label x:Name="nameLabel" Text="John Doe" FontSize="24" FontAttributes="Bold" HorizontalOptions="Center" />
+            <Label x:Name="nameLabel" Text="Name: " FontSize="24" FontAttributes="Bold" HorizontalOptions="Center" />
 
             <!-- Contact Info -->
-            <Label x:Name="emailLabel" Text="Contact: john.doe@example.com" FontSize="16" TextColor="Gray" HorizontalOptions="Center" />
+            <Label x:Name="emailLabel" Text="Contact: " FontSize="16" TextColor="Gray" HorizontalOptions="Center" />
 
             <!-- Address -->
-            <Label x:Name="addressLabel" Text="Address: 123 Business Street, Sudbury, ON" FontSize="16" TextColor="Gray" HorizontalOptions="Center" />
+            <Label x:Name="addressLabel" Text="Address: " FontSize="16" TextColor="Gray" HorizontalOptions="Center" />
 
             <!-- Age -->
-            <Label x:Name="ageLabel" Text="Age: 30" FontSize="16" TextColor="Gray" HorizontalOptions="Center" />
+            <Label x:Name="ageLabel" Text="Age: " FontSize="16" TextColor="Gray" HorizontalOptions="Center" />
 
             <!-- Nationality -->
-            <Label x:Name="nationalityLabel" Text="Nationality: Canadian" FontSize="16" TextColor="Gray" HorizontalOptions="Center" />
+            <Label x:Name="nationalityLabel" Text="Nationality:" FontSize="16" TextColor="Gray" HorizontalOptions="Center" />
 
             <!-- Skills -->
             <Label x:Name="skillsLabel" Text="Skills: Business Management" FontSize="16" TextColor="Gray" HorizontalOptions="Center" />

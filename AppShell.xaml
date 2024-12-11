@@ -4,14 +4,14 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:pages="clr-namespace:localbusinessExplore.Pages">
 
-    <ShellContent ContentTemplate="{DataTemplate pages:LoginPage}" Route="LoginPage" />
-    <ShellContent ContentTemplate="{DataTemplate pages:SignUpPage}" Route="SignUpPage" />
+    <ShellContent  Title="Login" ContentTemplate= "{DataTemplate pages:LoginPage}" Route="LoginPage" />
+    <ShellContent  Title="SignUP" ContentTemplate="{DataTemplate pages:SignUpPage}" Route="SignUpPage" />
     <ShellContent
         Title="Home"
         ContentTemplate="{DataTemplate pages:HomePage}"
         Route="HomePage" />
-    <ShellContent ContentTemplate="{DataTemplate pages:EventsPage}" Route="EventsPage" />
-    <ShellContent ContentTemplate="{DataTemplate pages:MapPage}" Route="MapPage" />
+    <ShellContent Title="Error" ContentTemplate="{DataTemplate pages:EventsPage}" Route="EventsPage" />
+    <ShellContent  Title="Map Page" ContentTemplate="{DataTemplate pages:MapPage}" Route="MapPage" />
 
 
 </Shell>

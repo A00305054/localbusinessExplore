@@ -1,36 +1,63 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="localbusinessExplore.Pages.EditProfile"
-             Title="Edit Profile"
-             BackgroundColor="White">
-    <VerticalStackLayout Spacing="20" Padding="20">
-        <!-- Profile Image Edit Section -->
-        <Frame CornerRadius="75" HeightRequest="150" WidthRequest="150" HorizontalOptions="Center">
-            <Image Source="profile_icon.png" Aspect="AspectFill" />
+<ContentPage
+    x:Class="localbusinessExplore.Pages.EditProfile"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Title="Edit Profile"
+    BackgroundColor="White">
+    <VerticalStackLayout Padding="20" Spacing="20">
+        <!--  Profile Image Edit Section  -->
+        <Frame
+            CornerRadius="75"
+            HeightRequest="150"
+            HorizontalOptions="Center"
+            WidthRequest="150">
+            <Image Aspect="AspectFill" Source="profile_icon.png" />
         </Frame>
-        <Button Text="Change Profile Picture"
-                BackgroundColor="#2196F3"
-                TextColor="White"
-                CornerRadius="20"
-                WidthRequest="200"
-                HorizontalOptions="Center" />
+        <Button
+            BackgroundColor="#2196F3"
+            CornerRadius="20"
+            HorizontalOptions="Center"
+            Text="Change Profile Picture"
+            TextColor="White"
+            WidthRequest="200" />
 
-        <!-- Edit Fields -->
-        <Entry x:Name="nameEntry" Placeholder="Name" FontSize="16" />
-        <Entry x:Name="emailEntry" Placeholder="Email" FontSize="16" Keyboard="Email" />
-        <Entry x:Name="addressEntry" Placeholder="Address" FontSize="16" />
-        <Entry x:Name="ageEntry" Placeholder="Age" FontSize="16" Keyboard="Numeric" />
-        <Entry x:Name="nationalityEntry" Placeholder="Nationality" FontSize="16" />
-        <Editor x:Name="skillsEditor" Placeholder="Skills (e.g., Business Management, Marketing)" HeightRequest="100" />
+        <!--  Edit Fields  -->
+        <Entry
+            x:Name="nameEntry"
+            FontSize="16"
+            Placeholder="Name" />
+        <Entry
+            x:Name="emailEntry"
+            FontSize="16"
+            Keyboard="Email"
+            Placeholder="Email" />
+        <Entry
+            x:Name="addressEntry"
+            FontSize="16"
+            Placeholder="Address" />
+        <Entry
+            x:Name="ageEntry"
+            FontSize="16"
+            Keyboard="Numeric"
+            Placeholder="Age" />
+        <Entry
+            x:Name="nationalityEntry"
+            FontSize="16"
+            Placeholder="Nationality" />
+        <Editor
+            x:Name="skillsEditor"
+            HeightRequest="10"
+            Placeholder="Skills (e.g., Business Management, Marketing)" />
 
-        <!-- Save Button -->
-        <Button Text="Save Changes"
-                BackgroundColor="#4CAF50"
-                TextColor="White"
-                CornerRadius="20"
-                WidthRequest="200"
-                HorizontalOptions="Center"
-                Clicked="OnSaveChangesClicked" />
+        <!--  Save Button  -->
+        <Button
+            BackgroundColor="#4CAF50"
+            Clicked="OnSaveChangesClicked"
+            CornerRadius="20"
+            HorizontalOptions="Center"
+            Text="Save Changes"
+            TextColor="White"
+            WidthRequest="200" />
     </VerticalStackLayout>
 </ContentPage>

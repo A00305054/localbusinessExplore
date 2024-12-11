@@ -1,16 +1,14 @@
-﻿using System.Collections.Generic;
-
-namespace localbusinessExplore.Entities
+﻿namespace localbusinessExplore.Entities
 {
     public class Place
     {
         public string Name { get; set; }
         public string Address { get; set; }
-        public string PhoneNumber { get; set; }
-        public string Rating { get; set; }
+        public string ContactNo { get; set; }
+        public double Rating { get; set; }
         public string OpeningHours { get; set; }
-        public string BusinessStatus { get; set; }
-        public string Location { get; set; }
-        public List<string> Photos { get; set; }
+        public string Photo { get; set; }
+        public string Category { get; set; } 
+
     }
 }

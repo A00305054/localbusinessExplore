@@ -1,31 +1,164 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:viewModels="clr-namespace:localbusinessExplore.ViewModels"
-             x:Class="localbusinessExplore.Pages.PlacesPage"
-             Title="PlacesPage">
+<ContentPage
+    x:Class="localbusinessExplore.Pages.PlacesPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:viewModels="clr-namespace:localbusinessExplore.ViewModels"
+    Title="Businesses Near You">
 
-    <ContentPage.BindingContext>
-        <!-- Bind to the PlacesViewModel -->
+    <ScrollView>
+        <StackLayout Padding="15" BackgroundColor="#F4F4F4">
+
+            
+            <CollectionView
+                BackgroundColor="Transparent"
+                ItemSizingStrategy="MeasureFirstItem"
+                ItemsSource="{Binding Businesses}">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Frame
+                         
+                            Margin="10"
+                            Padding="15"
+                            BorderColor="#CCCCCC"
+                            CornerRadius="15"
+                            HasShadow="True">
+                            <StackLayout Spacing="20">
+                                <!--  Name and Address in Center (Stacked vertically)  -->
+                                <StackLayout HorizontalOptions="CenterAndExpand">
+                                    <Label
+                                        Margin="0,0,0,3"
+                                        FontAttributes="Bold"
+                                        FontSize="20"
+                                        HorizontalOptions="Center"
+                                        Text="{Binding Name}"
+                                        TextColor="#333333" />
+                                    <Label
+                                        FontSize="16"
+                                        HorizontalOptions="Center"
+                                        Text="{Binding Address}"
+                                        TextColor="#666666" />
+                                </StackLayout>
+
+                                <!--  Horizontal Stack for Contact, Opening Hours, Category, and Rating on Left  -->
+                                <StackLayout Orientation="Horizontal" Spacing="15">
+                                    <StackLayout HorizontalOptions="StartAndExpand" VerticalOptions="Start">
+                                        <Label FontSize="16">
+                                            <Label.FormattedText>
+                                                <FormattedString>
+                                                    <Span Text="Contact No: " TextColor="#36b1f7" />
+                                                    <Span Text="{Binding ContactNo}" TextColor="#666666" />
+                                                </FormattedString>
+                                            </Label.FormattedText>
+                                        </Label>
+
+                                        <Label Margin="0,15,0,15" FontSize="16">
+                                            <Label.FormattedText>
+                                                <FormattedString>
+                                                    <Span Text="Visit Between: " TextColor="#36b1f7" />
+                                                    <Span Text="{Binding OpeningHours}" TextColor="#666666" />
+                                                </FormattedString>
+                                            </Label.FormattedText>
+                                        </Label>
+
+                                        <Label FontSize="16">
+                                            <Label.FormattedText>
+                                                <FormattedString>
+                                                    <Span Text="Type: " TextColor="#36b1f7" />
+                                                    <Span Text="{Binding Category}" TextColor="#666666" />
+                                                </FormattedString>
+                                            </Label.FormattedText>
+                                        </Label>
+
+                                        <Label FontSize="16">
+                                            <Label.FormattedText>
+                                                <FormattedString>
+                                                    <Span Text="Rating: " TextColor="#36b1f7" />
+                                                    <Span Text="{Binding Rating}" TextColor="#666666" />
+                                                </FormattedString>
+                                            </Label.FormattedText>
+                                        </Label>
+                                    </StackLayout>
+
+                                    <!--  Image with Border on the Right  -->
+                                    <Frame
+                                        Margin="10"
+                                        Padding="0"
+                                        BorderColor="#CCCCCC"
+                                        CornerRadius="10"
+                                        HasShadow="True"
+                                        HeightRequest="120"
+                                        HorizontalOptions="End"
+                                        VerticalOptions="Center"
+                                        WidthRequest="120">
+
+                                        <Image
+                                            Aspect="AspectFill"
+                                            HeightRequest="120"
+                                            HorizontalOptions="Center"
+                                            Source="{Binding Photo}"
+                                            WidthRequest="120" />
+
+                                    </Frame>
+
+                                </StackLayout>
+                            </StackLayout>
+                        </Frame>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </StackLayout>
+    </ScrollView>
+
+
+
+    <!--<ContentPage.BindingContext>
+    -->
+    <!--  Bind to the PlacesViewModel  -->
+    <!--
         <viewModels:PlacesViewModel />
     </ContentPage.BindingContext>
 
-    <!-- CollectionView to display the places -->
+    -->
+    <!--  CollectionView to display the places  -->
+    <!--
     <CollectionView ItemsSource="{Binding Places}">
         <CollectionView.ItemTemplate>
             <DataTemplate>
-                <Frame Padding="10" Margin="10" CornerRadius="10" BorderColor="Gray" HasShadow="True">
+                <Frame
+                    Margin="10"
+                    Padding="10"
+                    BorderColor="Gray"
+                    CornerRadius="10"
+                    HasShadow="True">
                     <StackLayout>
-                        <!-- Add Image here -->
-                        <!--<Image Source="{Binding ImageUrl}" Aspect="AspectFill" HeightRequest="200" />-->
-                        <Label Text="{Binding Name}" FontSize="18" FontAttributes="Bold" />
-                        <Label Text="{Binding Address}" FontSize="14" TextColor="Gray" />
-                        <Label Text="{Binding PhoneNumber}" FontSize="14" TextColor="Gray" />
-                        <Label Text="{Binding Rating}" FontSize="14" TextColor="Gray" />
-                        <Label Text="{Binding OpeningHours}" FontSize="14" TextColor="Gray" />
+    -->
+    <!--  Add Image here  -->
+    <!--<Image Source="{Binding ImageUrl}" Aspect="AspectFill" HeightRequest="200" />-->
+    <!--
+                        <Label
+                            FontAttributes="Bold"
+                            FontSize="18"
+                            Text="{Binding Name}" />
+                        <Label
+                            FontSize="14"
+                            Text="{Binding Address}"
+                            TextColor="Gray" />
+                        <Label
+                            FontSize="14"
+                            Text="{Binding PhoneNumber}"
+                            TextColor="Gray" />
+                        <Label
+                            FontSize="14"
+                            Text="{Binding Rating}"
+                            TextColor="Gray" />
+                        <Label
+                            FontSize="14"
+                            Text="{Binding OpeningHours}"
+                            TextColor="Gray" />
                     </StackLayout>
                 </Frame>
             </DataTemplate>
         </CollectionView.ItemTemplate>
-    </CollectionView>
+    </CollectionView>-->
 </ContentPage>

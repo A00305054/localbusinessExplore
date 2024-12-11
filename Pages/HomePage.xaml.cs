@@ -14,6 +14,7 @@ using Microsoft.Maui.Maps;
 using Microsoft.Maui.Controls;
 using Microsoft.Maui.Devices.Sensors;
 using Location = Microsoft.Maui.Devices.Sensors.Location;
+using System.Diagnostics;
 
 
 namespace localbusinessExplore.Pages
@@ -67,54 +68,56 @@ namespace localbusinessExplore.Pages
         {
             try
             {
-                // Get the user's current location (Hardcoded for Sudbury, ON)
-                double latitude = 46.490001;
-                double longitude = -81.010002;
+                await Navigation.PushAsync(new PlacesPage());
 
-                // Construct the URL for the API call
-                string url = $"{GooglePlacesApiUrl}?location={latitude},{longitude}&radius=1500&type=business&key={GooglePlacesApiKey}";
+                //// Get the user's current location (Hardcoded for Sudbury, ON)
+                //double latitude = 46.490001;
+                //double longitude = -81.010002;
 
-                using var httpClient = new HttpClient();
-                var response = await httpClient.GetFromJsonAsync<GooglePlaces>(url);
+                //// Construct the URL for the API call
+                //string url = $"{GooglePlacesApiUrl}?location={latitude},{longitude}&radius=1500&type=business&key={GooglePlacesApiKey}";
 
-                // Access the 'results' property, not 'result'
-                if (response?.results != null && response.results.Any())
-                {
-                    var places = response.results;
-                    var placeList = new List<Place>();
+                //using var httpClient = new HttpClient();
+                //var response = await httpClient.GetFromJsonAsync<GooglePlaces>(url);
 
-                    // Extract business details
-                    foreach (var place in places)
-                    {
-                        var business = new Place
-                        {
-                            Name = place.name,
-                            Address = place.vicinity, // Address or vicinity of the place
-                            PhoneNumber = "N/A", // Phone number (not provided in API structure here)
-                            Rating = place.rating?.ToString() ?? "N/A", // Rating (if available)
-                            OpeningHours = place.opening_hours?.weekday_text != null
-                                ? string.Join(", ", place.opening_hours.weekday_text)
-                                : "N/A", // Opening hours (if available)
-                            BusinessStatus = place.business_status ?? "N/A", // Business status (if available)
-                            Location = place.geometry?.location != null
-                                ? $"{place.geometry.location.lat}, {place.geometry.location.lng}"
-                                : "N/A", // Location (latitude, longitude)
-                            Photos = place.photos?.Select(p => p.photo_reference).ToList() ?? new List<string>(), // Photos (if available)
-                        };
-                        placeList.Add(business);
-                    }
+                //// Access the 'results' property, not 'result'
+                //if (response?.results != null && response.results.Any())
+                //{
+                //    var places = response.results;
+                //    var placeList = new List<Place>();
 
-                    // Create a new PlacesPage and pass the data
-                    var placesPage = new PlacesPage();
-                    placesPage.BindingContext = new PlacesViewModel { Places = new ObservableCollection<Place>(placeList) };
+                //    // Extract business details
+                //    foreach (var place in places)
+                //    {
+                //        var business = new Place
+                //        {
+                //            Name = place.name,
+                //            Address = place.vicinity, // Address or vicinity of the place
+                //            PhoneNumber = "N/A", // Phone number (not provided in API structure here)
+                //            Rating = place.rating?.ToString() ?? "N/A", // Rating (if available)
+                //            OpeningHours = place.opening_hours?.weekday_text != null
+                //                ? string.Join(", ", place.opening_hours.weekday_text)
+                //                : "N/A", // Opening hours (if available)
+                //            BusinessStatus = place.business_status ?? "N/A", // Business status (if available)
+                //            Location = place.geometry?.location != null
+                //                ? $"{place.geometry.location.lat}, {place.geometry.location.lng}"
+                //                : "N/A", // Location (latitude, longitude)
+                //            Photos = place.photos?.Select(p => p.photo_reference).ToList() ?? new List<string>(), // Photos (if available)
+                //        };
+                //        placeList.Add(business);
+                //    }
 
-                    // Navigate to the new page
-                    await Navigation.PushAsync(placesPage);
-                }
-                else
-                {
-                    await DisplayAlert("Error", "No businesses found nearby.", "OK");
-                }
+                //    // Create a new PlacesPage and pass the data
+                //    var placesPage = new PlacesPage();
+                //    placesPage.BindingContext = new PlacesViewModel { Places = new ObservableCollection<Place>(placeList) };
+
+                //    // Navigate to the new page
+                //    await Navigation.PushAsync(placesPage);
+                //}
+                //else
+                //{
+                //    await DisplayAlert("Error", "No businesses found nearby.", "OK");
+                //}
             }
             catch (Exception ex)
             {
@@ -162,6 +165,16 @@ namespace localbusinessExplore.Pages
             {
                 // Stay on the HomePage (do nothing)
             }
+        }
+
+        private async void OnCardTapped(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new FoodCategory());
+        }
+
+        private async void TapGestureRecognizer_Tapped(object sender, TappedEventArgs e)
+        {
+            await Navigation.PushAsync(new GroceryCategory());
         }
     }
 }
