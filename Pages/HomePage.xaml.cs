@@ -176,5 +176,25 @@ namespace localbusinessExplore.Pages
         {
             await Navigation.PushAsync(new GroceryCategory());
         }
+
+        private async void TapGestureRecognizer_Tapped_1(object sender, TappedEventArgs e)
+        {
+            await Navigation.PushAsync(new EventsCategory());
+        }
+
+        private async void TapGestureRecognizer_Tapped_2(object sender, TappedEventArgs e)
+        {
+            await Navigation.PushAsync(new TravelCategory());
+        }
+
+        private async void TapGestureRecognizer_Tapped_3(object sender, TappedEventArgs e)
+        {
+            await Navigation.PushAsync(new ShoppingCategory());
+        }
+
+        private async void TapGestureRecognizer_Tapped_4(object sender, TappedEventArgs e)
+        {
+            await Navigation.PushAsync(new ShoppingCategory());
+        }
     }
 }

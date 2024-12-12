@@ -5,11 +5,11 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:maps="clr-namespace:Microsoft.Maui.Controls.Maps;assembly=Microsoft.Maui.Controls.Maps"
     Title="Home">
-    <ScrollView>
-        <VerticalStackLayout Padding="10" Spacing="20">
 
-            <!--  Header Section  -->
-            <!--<Grid BackgroundColor="#F8F8F8"
+    <VerticalStackLayout Padding="10" Spacing="20">
+
+        <!--  Header Section  -->
+        <!--<Grid BackgroundColor="#F8F8F8"
                   Padding="10">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="Auto" />
@@ -32,8 +32,8 @@
                              WidthRequest="30" />
             </Grid>-->
 
-            <!--  Welcome Text  -->
-            <!--<Button Text="Explore Businesses Near You"
+        <!--  Welcome Text  -->
+        <!--<Button Text="Explore Businesses Near You"
                     FontSize="18"
                     FontAttributes="Bold"
                     HorizontalOptions="Center"
@@ -44,290 +44,291 @@
                     Clicked="OnExploreClicked" />-->
 
 
-            <!--  Location Banner  -->
-            <!--<Image Source="find_location.png"
+        <!--  Location Banner  -->
+        <!--<Image Source="find_location.png"
                    HeightRequest="200"
                    WidthRequest="250"
                    HorizontalOptions="Center" />-->
-            <Label
-                FontAttributes="Bold"
-                FontSize="16"
-                HorizontalOptions="Center"
-                Text="Location Map"
-                TextColor="Black"
-                VerticalOptions="Start" />
+        <Label
+            FontAttributes="Bold"
+            FontSize="16"
+            HorizontalOptions="Center"
+            Text="Location Map"
+            TextColor="Black"
+            VerticalOptions="Start" />
 
-            <Grid Padding="1">
+        <Grid Padding="1">
 
-                <!--  Add a Frame to decorate the map with shadow and rounded corners  -->
-                <Frame
-                    Padding="0"
-                    BackgroundColor="White"
-                    CornerRadius="10"
-                    HasShadow="True"
-                    HeightRequest="200"
-                    HorizontalOptions="Center"
-                    VerticalOptions="Center"
-                    WidthRequest="300">
-
-                    <!--  Define the map control here  -->
-                    <maps:Map
-                        x:Name="MapControl"
-                        HeightRequest="200"
-                        HorizontalOptions="FillAndExpand"
-                        IsShowingUser="True"
-                        VerticalOptions="FillAndExpand"
-                        WidthRequest="300" />
-                </Frame>
-
-            </Grid>
-
-
-
-            <Button
-                BackgroundColor="#007AFF"
-                Clicked="OnExploreClicked"
+            <!--  Add a Frame to decorate the map with shadow and rounded corners  -->
+            <Frame
+                Padding="0"
+                BackgroundColor="White"
                 CornerRadius="10"
-                FontAttributes="Bold"
-                FontSize="18"
-                HeightRequest="50"
+                HasShadow="True"
+                HeightRequest="200"
                 HorizontalOptions="Center"
-                Text="Explore Businesses Near You"
-                TextColor="White" />
+                VerticalOptions="Center"
+                WidthRequest="300">
 
-            <!--  Categories Section  -->
-            <StackLayout>
-                <Grid Padding="5">
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="Auto" />
-                        <RowDefinition Height="Auto" />
-                    </Grid.RowDefinitions>
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="*" />
-                        <ColumnDefinition Width="*" />
-                    </Grid.ColumnDefinitions>
+                <!--  Define the map control here  -->
+                <maps:Map
+                    x:Name="MapControl"
+                    HeightRequest="200"
+                    HorizontalOptions="FillAndExpand"
+                    IsShowingUser="True"
+                    VerticalOptions="FillAndExpand"
+                    WidthRequest="300" />
+            </Frame>
 
-                    <!--  Categories Text  -->
-                    <Label
-                        Grid.Row="0"
-                        Grid.Column="0"
-                        Margin="30,0,0,0"
-                        FontAttributes="Bold"
-                        Text="Categories" />
+        </Grid>
 
 
-                    <Label
-                        Grid.Row="0"
-                        Grid.Column="1"
-                        Margin="0,0,30,0"
-                        HorizontalTextAlignment="End"
-                        Text="Show All"
-                        TextColor="#007AFF">
-                        <Label.GestureRecognizers>
-                            <TapGestureRecognizer Tapped="OnShowAllTapped" />
-                        </Label.GestureRecognizers>
-                    </Label>
 
-                    <!--  Categories Icons  -->
-                    <StackLayout
+        <Button
+            BackgroundColor="#007AFF"
+            Clicked="OnExploreClicked"
+            CornerRadius="10"
+            FontAttributes="Bold"
+            FontSize="18"
+            HeightRequest="50"
+            HorizontalOptions="Center"
+            Text="Explore Businesses Near You"
+            TextColor="White" />
+
+        <!--  Categories Section  -->
+        <StackLayout>
+            <Grid Padding="5">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+                <!--  Categories Text  -->
+                <Label
+                    Grid.Row="0"
+                    Grid.Column="0"
+                    Margin="30,0,0,0"
+                    FontAttributes="Bold"
+                    Text="Categories" />
+
+
+                <Label
+                    Grid.Row="0"
+                    Grid.Column="1"
+                    Margin="0,0,30,0"
+                    HorizontalTextAlignment="End"
+                    Text="Show All"
+                    TextColor="#007AFF">
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnShowAllTapped" />
+                    </Label.GestureRecognizers>
+                </Label>
+
+                <!--  Categories Icons  -->
+                <StackLayout
+                    Grid.Row="1"
+                    Orientation="Horizontal"
+                    Spacing="20">
+                    <Grid
                         Grid.Row="1"
-                        Orientation="Horizontal"
-                        Spacing="20">
-                        <Grid
+                        Margin="15,0,0,0"
+                        Padding="15"
+                        ColumnSpacing="15"
+                        RowSpacing="15">
+                        <!--  Define 2 rows and 3 columns  -->
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+
+                        <!--  Food Card  -->
+                        <Frame
+                            Grid.Row="0"
+                            Grid.Column="0"
+                            Padding="8"
+                            BackgroundColor="White"
+                            BindingContext="Food"
+                            CornerRadius="8"
+                            HasShadow="True"
+                            HeightRequest="80"
+                            HorizontalOptions="Center"
+                            VerticalOptions="Center"
+                            WidthRequest="80">
+                            <VerticalStackLayout HorizontalOptions="Center" Spacing="8">
+                                <Image
+                                    HeightRequest="30"
+                                    Source="food_icon.png"
+                                    WidthRequest="30" />
+                                <Label
+                                    FontAttributes="Bold"
+                                    HorizontalTextAlignment="Center"
+                                    Text="Food" />
+                            </VerticalStackLayout>
+
+                            <!--  Adding the Tap Gesture Recognizer  -->
+                            <Frame.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="OnCardTapped" />
+                            </Frame.GestureRecognizers>
+                        </Frame>
+
+
+                        <!--  Grocery Card  -->
+                        <Frame
+                            Grid.Row="0"
+                            Grid.Column="1"
+                            Padding="8"
+                            BackgroundColor="White"
+                            CornerRadius="8"
+                            HasShadow="True"
+                            HeightRequest="80"
+                            HorizontalOptions="Center"
+                            VerticalOptions="Center"
+                            WidthRequest="80">
+                            <VerticalStackLayout HorizontalOptions="Center" Spacing="8">
+                                <Image
+                                    HeightRequest="30"
+                                    Source="grocery_icon.png"
+                                    WidthRequest="30" />
+                                <Label
+                                    FontAttributes="Bold"
+                                    HorizontalTextAlignment="Center"
+                                    Text="Grocery" />
+                            </VerticalStackLayout>
+                            <Frame.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped" />
+                            </Frame.GestureRecognizers>
+                        </Frame>
+
+                        <!--  Shopping Card  -->
+                        <Frame
+                            Grid.Row="0"
+                            Grid.Column="2"
+                            Padding="8"
+                            BackgroundColor="White"
+                            CornerRadius="8"
+                            HasShadow="True"
+                            HeightRequest="80"
+                            HorizontalOptions="Center"
+                            VerticalOptions="Center"
+                            WidthRequest="80">
+                            <VerticalStackLayout HorizontalOptions="Center" Spacing="8">
+                                <Image
+                                    HeightRequest="30"
+                                    Source="shopping_icon.png"
+                                    WidthRequest="30" />
+                                <Label
+                                    FontAttributes="Bold"
+                                    HorizontalTextAlignment="Center"
+                                    Text="Shopping" />
+                            </VerticalStackLayout>
+                            <Frame.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_4" />
+                            </Frame.GestureRecognizers>
+                        </Frame>
+
+
+                        <!--  Events Card  -->
+                        <Frame
                             Grid.Row="1"
-                            Margin="15,0,0,0"
-                            Padding="15"
-                            ColumnSpacing="15"
-                            RowSpacing="15">
-                            <!--  Define 2 rows and 3 columns  -->
-                            <Grid.RowDefinitions>
-                                <RowDefinition Height="Auto" />
-                                <RowDefinition Height="Auto" />
-                            </Grid.RowDefinitions>
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="*" />
-                                <ColumnDefinition Width="*" />
-                                <ColumnDefinition Width="*" />
-                            </Grid.ColumnDefinitions>
+                            Grid.Column="0"
+                            Padding="8"
+                            BackgroundColor="White"
+                            CornerRadius="8"
+                            HasShadow="True"
+                            HeightRequest="80"
+                            HorizontalOptions="Center"
+                            VerticalOptions="Center"
+                            WidthRequest="80">
+                            <VerticalStackLayout HorizontalOptions="Center" Spacing="8">
+                                <Image
+                                    HeightRequest="30"
+                                    Source="event_icon.png"
+                                    WidthRequest="30" />
+                                <Label
+                                    FontAttributes="Bold"
+                                    HorizontalTextAlignment="Center"
+                                    Text="Events" />
+                            </VerticalStackLayout>
+                            <Frame.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_1" />
+                            </Frame.GestureRecognizers>
+                        </Frame>
 
-                            <!--  Food Card  -->
-                            <Frame
-                                Grid.Row="0"
-                                Grid.Column="0"
-                                Padding="8"
-                                BackgroundColor="White"
-                                BindingContext="Food"
-                                CornerRadius="8"
-                                HasShadow="True"
-                                HeightRequest="80"
-                                HorizontalOptions="Center"
-                                VerticalOptions="Center"
-                                WidthRequest="80">
-                                <VerticalStackLayout HorizontalOptions="Center" Spacing="8">
-                                    <Image
-                                        HeightRequest="30"
-                                        Source="food_icon.png"
-                                        WidthRequest="30" />
-                                    <Label
-                                        FontAttributes="Bold"
-                                        HorizontalTextAlignment="Center"
-                                        Text="Food" />
-                                </VerticalStackLayout>
+                        <!--  Travel Card  -->
+                        <Frame
+                            Grid.Row="1"
+                            Grid.Column="1"
+                            Padding="8"
+                            BackgroundColor="White"
+                            CornerRadius="8"
+                            HasShadow="True"
+                            HeightRequest="80"
+                            HorizontalOptions="Center"
+                            VerticalOptions="Center"
+                            WidthRequest="80">
+                            <VerticalStackLayout HorizontalOptions="Center" Spacing="8">
+                                <Image
+                                    HeightRequest="30"
+                                    Source="travel_icon.png"
+                                    WidthRequest="30" />
+                                <Label
+                                    FontAttributes="Bold"
+                                    HorizontalTextAlignment="Center"
+                                    Text="Travel" />
+                            </VerticalStackLayout>
+                            <Frame.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_2" />
+                            </Frame.GestureRecognizers>
+                        </Frame>
 
-                                <!--  Adding the Tap Gesture Recognizer  -->
-                                <Frame.GestureRecognizers>
-                                    <TapGestureRecognizer Tapped="OnCardTapped" />
-                                </Frame.GestureRecognizers>
-                            </Frame>
+                        <!--  Fitness Card  -->
+                        <Frame
+                            Grid.Row="1"
+                            Grid.Column="2"
+                            Padding="8"
+                            BackgroundColor="White"
+                            CornerRadius="8"
+                            HasShadow="True"
+                            HeightRequest="80"
+                            HorizontalOptions="Center"
+                            VerticalOptions="Center"
+                            WidthRequest="80">
+                            <VerticalStackLayout HorizontalOptions="Center" Spacing="8">
+                                <Image
+                                    HeightRequest="30"
+                                    Source="fitness_icon.png"
+                                    WidthRequest="30" />
+                                <Label
+                                    FontAttributes="Bold"
+                                    HorizontalTextAlignment="Center"
+                                    Text="Fitness" />
+                            </VerticalStackLayout>
+                            <Frame.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_3" />
+                            </Frame.GestureRecognizers>
+                        </Frame>
 
-
-                            <!--  Grocery Card  -->
-                            <Frame
-                                Grid.Row="0"
-                                Grid.Column="1"
-                                Padding="8"
-                                BackgroundColor="White"
-                                CornerRadius="8"
-                                HasShadow="True"
-                                HeightRequest="80"
-                                HorizontalOptions="Center"
-                                VerticalOptions="Center"
-                                WidthRequest="80">
-                                <VerticalStackLayout HorizontalOptions="Center" Spacing="8">
-                                    <Image
-                                        HeightRequest="30"
-                                        Source="grocery_icon.png"
-                                        WidthRequest="30" />
-                                    <Label
-                                        FontAttributes="Bold"
-                                        HorizontalTextAlignment="Center"
-                                        Text="Grocery" />
-                                </VerticalStackLayout>
-                                <Frame.GestureRecognizers>
-                                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped" />
-                                </Frame.GestureRecognizers>
-                            </Frame>
-
-                            <!--  Shopping Card  -->
-                            <Frame
-                                Grid.Row="0"
-                                Grid.Column="2"
-                                Padding="8"
-                                BackgroundColor="White"
-                                CornerRadius="8"
-                                HasShadow="True"
-                                HeightRequest="80"
-                                HorizontalOptions="Center"
-                                VerticalOptions="Center"
-                                WidthRequest="80">
-                                <VerticalStackLayout HorizontalOptions="Center" Spacing="8">
-                                    <Image
-                                        HeightRequest="30"
-                                        Source="shopping_icon.png"
-                                        WidthRequest="30" />
-                                    <Label
-                                        FontAttributes="Bold"
-                                        HorizontalTextAlignment="Center"
-                                        Text="Shopping" />
-                                </VerticalStackLayout>
-                                <Frame.GestureRecognizers>
-                                    <TapGestureRecognizer CommandParameter="Shopping" Tapped="OnCardTapped" />
-                                </Frame.GestureRecognizers>
-                            </Frame>
-
-                            <!--  Events Card  -->
-                            <Frame
-                                Grid.Row="1"
-                                Grid.Column="0"
-                                Padding="8"
-                                BackgroundColor="White"
-                                CornerRadius="8"
-                                HasShadow="True"
-                                HeightRequest="80"
-                                HorizontalOptions="Center"
-                                VerticalOptions="Center"
-                                WidthRequest="80">
-                                <VerticalStackLayout HorizontalOptions="Center" Spacing="8">
-                                    <Image
-                                        HeightRequest="30"
-                                        Source="event_icon.png"
-                                        WidthRequest="30" />
-                                    <Label
-                                        FontAttributes="Bold"
-                                        HorizontalTextAlignment="Center"
-                                        Text="Events" />
-                                </VerticalStackLayout>
-                                <Frame.GestureRecognizers>
-                                    <TapGestureRecognizer CommandParameter="Events" Tapped="OnCardTapped" />
-                                </Frame.GestureRecognizers>
-                            </Frame>
-
-                            <!--  Travel Card  -->
-                            <Frame
-                                Grid.Row="1"
-                                Grid.Column="1"
-                                Padding="8"
-                                BackgroundColor="White"
-                                CornerRadius="8"
-                                HasShadow="True"
-                                HeightRequest="80"
-                                HorizontalOptions="Center"
-                                VerticalOptions="Center"
-                                WidthRequest="80">
-                                <VerticalStackLayout HorizontalOptions="Center" Spacing="8">
-                                    <Image
-                                        HeightRequest="30"
-                                        Source="travel_icon.png"
-                                        WidthRequest="30" />
-                                    <Label
-                                        FontAttributes="Bold"
-                                        HorizontalTextAlignment="Center"
-                                        Text="Travel" />
-                                </VerticalStackLayout>
-                                <Frame.GestureRecognizers>
-                                    <TapGestureRecognizer CommandParameter="Travel" Tapped="OnCardTapped" />
-                                </Frame.GestureRecognizers>
-                            </Frame>
-
-                            <!--  Fitness Card  -->
-                            <Frame
-                                Grid.Row="1"
-                                Grid.Column="2"
-                                Padding="8"
-                                BackgroundColor="White"
-                                CornerRadius="8"
-                                HasShadow="True"
-                                HeightRequest="80"
-                                HorizontalOptions="Center"
-                                VerticalOptions="Center"
-                                WidthRequest="80">
-                                <VerticalStackLayout HorizontalOptions="Center" Spacing="8">
-                                    <Image
-                                        HeightRequest="30"
-                                        Source="fitness_icon.png"
-                                        WidthRequest="30" />
-                                    <Label
-                                        FontAttributes="Bold"
-                                        HorizontalTextAlignment="Center"
-                                        Text="Fitness" />
-                                </VerticalStackLayout>
-                                <Frame.GestureRecognizers>
-                                    <TapGestureRecognizer CommandParameter="Fitness" Tapped="OnCardTapped" />
-                                </Frame.GestureRecognizers>
-                            </Frame>
-
-                        </Grid>
+                    </Grid>
 
 
-                    </StackLayout>
-                </Grid>
-            </StackLayout>
+                </StackLayout>
+            </Grid>
+        </StackLayout>
 
 
 
 
-            <!--  Logout Button  -->
-            <!--<Button Text="Logout"
+        <!--  Logout Button  -->
+        <!--<Button Text="Logout"
                     BackgroundColor="#FF6B6B"
                     TextColor="White"
                     FontAttributes="Bold"
@@ -336,40 +337,40 @@
                     Clicked="OnLogoutClicked"
                     Command="{Binding LogoutCommand}" />-->
 
-            <!--  Footer Navigation  -->
-            <Frame
-                Padding="0"
-                BackgroundColor="#F8F8F8"
-                CornerRadius="10"
-                HasShadow="True">
-                <Grid Padding="30,5,30,5">
+        <!--  Footer Navigation  -->
+        <Frame
+            Padding="0"
+            BackgroundColor="#F8F8F8"
+            CornerRadius="10"
+            HasShadow="True">
+            <Grid Padding="30,5,30,5">
 
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="*" />
-                        <ColumnDefinition Width="*" />
-                        <ColumnDefinition Width="*" />
-                    </Grid.ColumnDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
 
-                    <ImageButton
-                        Grid.Column="0"
-                        Clicked="ImageButton_Clicked_1"
-                        HeightRequest="40"
-                        Source="logout_icon.png"
-                        WidthRequest="40" />
-                    <ImageButton
-                        Grid.Column="1"
-                        Clicked="ImageButton_Clicked"
-                        HeightRequest="40"
-                        Source="explore_icon.png"
-                        WidthRequest="40" />
-                    <ImageButton
-                        Grid.Column="2"
-                        Clicked="OnProfileClicked"
-                        HeightRequest="40"
-                        Source="user_icon.png"
-                        WidthRequest="40" />
-                </Grid>
-            </Frame>
-        </VerticalStackLayout>
-    </ScrollView>
+                <ImageButton
+                    Grid.Column="0"
+                    Clicked="ImageButton_Clicked_1"
+                    HeightRequest="40"
+                    Source="logout_icon.png"
+                    WidthRequest="40" />
+                <ImageButton
+                    Grid.Column="1"
+                    Clicked="ImageButton_Clicked"
+                    HeightRequest="40"
+                    Source="explore_icon.png"
+                    WidthRequest="40" />
+                <ImageButton
+                    Grid.Column="2"
+                    Clicked="OnProfileClicked"
+                    HeightRequest="40"
+                    Source="user_icon.png"
+                    WidthRequest="40" />
+            </Grid>
+        </Frame>
+    </VerticalStackLayout>
+
 </ContentPage>
